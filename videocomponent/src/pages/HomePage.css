@@ -1,0 +1,97 @@
+/* General styles for the homepage */
+.home {
+    padding: 2vw;
+    max-width: 90vw; /* Ensure the container fills most of the screen */
+    margin: 0 auto; /* Center the content horizontally */
+    box-sizing: border-box;
+  }
+  
+h1 {
+    text-align: center;
+    font-size: 2.5rem; /* Responsive font size */
+    margin-bottom: 2vh; /* Adjust for vertical spacing */
+  }
+  
+h2 {
+    margin-top: 2vh;
+    margin-bottom: 1.5vh;
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  
+/* Grid layout for videos and articles */
+.video-grid, .article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 2vw;
+    justify-items: center;
+    width: 100%;
+    padding: 2vw;
+}
+  
+.grid-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2vw;
+    transition: transform 0.3s;
+    width: 100%;
+    max-width: 100%; /* Full width for responsiveness */
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item h3 {
+    text-align: center;
+    margin-top: 1vw;
+}
+
+/* Article specific styles */
+.article-card {
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 2vw;
+    transition: box-shadow 0.3s ease-in-out;
+    width: 100%;
+    max-width: 100%;
+}
+
+.article-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for better layout on smaller screens */
+@media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .grid-item {
+      padding: 1.5vw;
+    }
+}
+  
+@media (min-width: 1200px) {
+    .home {
+        max-width: 85vw;
+    }
+    
+    .video-grid, .article-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Larger columns for larger screens */
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+}
