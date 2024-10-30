@@ -5,143 +5,126 @@ import './VideosPage.css'; // Import the CSS file
 const VideosPage = () => {
   const sampleVideos = [
     {
-      id: 1,
-      url: 'https://www.youtube.com/watch?v=example1',
-      thumbnail: 'https://via.placeholder.com/280x180?text=Postpartum+Care+English',
-      title: 'Postpartum Care: The First Six Weeks',
-      description: 'Learn about the essential care for new mothers in the first six weeks after giving birth.',
+      id: "671b788d19a2d80d0e6677ee", // Sample _id used as id
+      url: 'https://www.youtube.com/embed/JVu_mNqd-MM', // Constructed from videoId
+      thumbnail: 'https://i.ytimg.com/vi/JVu_mNqd-MM/default.jpg',
+      title: "Samita's Successful Knee Replacement Surgery | Dr. Lokesh A V | Manipal Hospital Old Airport Road",
+      description: "Mrs. Samita Das, from Birbhum district in West Bengal, had endured severe knee pain for 7 to 8 years. After consulting local doctors, she was advised to undergo surgery. Dr. Lokesh diagnosed her with Grade 4 Osteoarthritis, and a Total Knee Replacement (TKR) surgery was performed. Today, she enjoys an active, pain-free life.",
       language: 'English',
     },
-    {
-      id: 2,
-      url: 'https://www.youtube.com/watch?v=example2',
-      thumbnail: 'https://via.placeholder.com/280x180?text=Postpartum+Care+Spanish',
-      title: 'Cuidado Postparto: Las Primeras Seis Semanas',
-      description: 'Aprenda sobre el cuidado esencial para nuevas madres en las primeras seis semanas después del parto.',
-      language: 'Spanish',
-    },
-    {
-      id: 3,
-      url: 'https://www.youtube.com/watch?v=example3',
-      thumbnail: 'https://via.placeholder.com/280x180?text=Postpartum+Care+Hindi',
-      title: 'प्रसवोत्तर देखभाल: पहले छह सप्ताह',
-      description: 'बच्चे के जन्म के बाद पहले छह हफ्तों में नई माताओं के लिए आवश्यक देखभाल के बारे में जानें।',
-      language: 'Hindi',
-    },
+    // ... (Add more sample videos as needed)
   ];
 
   const [videos, setVideos] = useState(sampleVideos);
   const [searchTerm, setSearchTerm] = useState('');
-  const [language, setLanguage] = useState('English');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [isPending, startTransition] = useTransition();
 
-  // Function for the text-to-speech feature
-  const speak = (text) => {
-    const utterance = new SpeechSynthesisUtterance(text);
-    window.speechSynthesis.speak(utterance);
-  };
+  // Pagination states
+  const [currentPage, setCurrentPage] = useState(1);
+  const videosPerPage = 12;
 
-  // Function to fetch videos from the backend
-  const fetchVideos = async (query = '', selectedLanguage = 'English') => {
+  const fetchVideos = async (query = '') => {
     setLoading(true);
     setError('');
     try {
-      const response = await fetch(`/api/videos?search=${query}&language=${selectedLanguage}`);
-      const data = await response.json();
+      const response = await fetch(
+        `http://43.204.220.190/api/videos?search=${encodeURIComponent(query)}`
+      );
 
-      if (data.length > 0) {
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.message || 'Failed to fetch videos from backend.');
+      }
+
+      const data = await response.json();
+      if (data && data.videos.length > 0) {
+        const mappedVideos = data.videos.map(video => ({
+          id: video._id, // Map _id to id
+          url: `https://www.youtube.com/embed/${video.videoId}`, // Construct URL from videoId
+          thumbnail: video.thumbnail,
+          title: video.title,
+          description: video.description,
+        }));
+
         startTransition(() => {
-          setVideos(data);
+          setVideos(mappedVideos); // Set fetched videos
+          setCurrentPage(1); // Reset to the first page
         });
       } else {
-        handleFrontendSearch(query, selectedLanguage);
+        handleFrontendSearch(query);
       }
     } catch (err) {
-      setError('Failed to load videos from backend. Showing local videos.');
+      setError(`Failed to load videos from backend: ${err.message}`);
       console.error('Error fetching videos:', err);
-      handleFrontendSearch(query, selectedLanguage);
+      handleFrontendSearch(query);
     } finally {
-      setLoading(false); // Ensure loading is set to false in all cases
+      setLoading(false);
     }
   };
 
-  // Fallback search logic using Fuse.js
-  const handleFrontendSearch = (query, selectedLanguage) => {
-    const fuse = new Fuse(
-      sampleVideos.filter(video => video.language === selectedLanguage),
-      {
-        keys: ['title', 'description'],
-        includeScore: true,
-        threshold: 0.3,
-      }
-    );
+  const handleFrontendSearch = (query) => {
+    const fuse = new Fuse(sampleVideos, {
+      keys: ['title', 'description'],
+      includeScore: true,
+      threshold: 0.3,
+    });
 
     const results = fuse.search(query);
-    const filteredVideos = results.map(result => result.item);
+    const filteredVideos = results
+      .sort((a, b) => a.score - b.score)
+      .map((result) => result.item);
 
     setVideos(filteredVideos.length > 0 ? filteredVideos : sampleVideos);
+    setCurrentPage(1); // Reset to the first page after search
   };
 
-  // Handle form submission for search
   const handleSearch = (e) => {
     e.preventDefault();
     if (!loading) {
       startTransition(() => {
-        fetchVideos(searchTerm, language);
+        // Clear videos when starting a search to prevent clutter
+        fetchVideos(searchTerm);
       });
     }
   };
 
-  // Handle language selection changes
-  const handleLanguageChange = (e) => {
-    const newLanguage = e.target.value;
-    setLanguage(newLanguage);
-    startTransition(() => {
-      fetchVideos(searchTerm, newLanguage);
-    });
+  // Pagination logic
+  const totalPages = Math.ceil(videos.length / videosPerPage);
+  const paginatedVideos = videos.slice(
+    (currentPage - 1) * videosPerPage,
+    currentPage * videosPerPage
+  );
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) setCurrentPage((prev) => prev + 1);
   };
 
-  // Start speech recognition to populate search
-  const startSpeechRecognition = () => {
-    const recognition = new window.SpeechRecognition();
-    recognition.lang = language;
-    recognition.interimResults = false;
-
-    recognition.onresult = (event) => {
-      const transcript = event.results[0][0].transcript;
-      setSearchTerm(transcript);
-      fetchVideos(transcript, language);
-    };
-
-    recognition.onerror = (event) => {
-      setError(`Speech recognition error: ${event.error}`);
-      console.error('Speech recognition error: ', event.error);
-    };
-
-    recognition.onend = () => {
-      console.log('Speech recognition ended.');
-    };
-
-    recognition.start();
+  const handlePrevPage = () => {
+    if (currentPage > 1) setCurrentPage((prev) => prev - 1);
   };
+
+  const renderVideoCard = (video) => (
+    <div key={video.id} className="video-card">
+      <iframe
+        src={video.url}
+        title={video.title}
+        className="video-iframe"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+      <div className="video-info">
+        <h2 className="video-title">{video.title}</h2>
+        <p className="video-description">{video.description}</p>
+      </div>
+    </div>
+  );
 
   return (
     <div className="videos-page">
       <h1 className="page-title">Video Resources</h1>
-      
-      {/* Language selector dropdown */}
-      <div className="language-selector">
-        <label htmlFor="language">Choose Language:</label>
-        <select id="language" value={language} onChange={handleLanguageChange}>
-          <option value="English">English</option>
-          <option value="Spanish">Spanish</option>
-          <option value="Hindi">Hindi</option>
-        </select>
-      </div>
 
-      {/* Search bar with speech input */}
       <form className="search-bar" onSubmit={handleSearch}>
         <input
           type="text"
@@ -153,36 +136,30 @@ const VideosPage = () => {
         <button type="submit" className="search-button" disabled={loading}>
           Search
         </button>
-        <button type="button" onClick={startSpeechRecognition} className="speech-button">
-          🎤 Speak
-        </button>
       </form>
 
-      {/* Loading and error messages */}
       {loading && <p className="loading-message">Loading videos...</p>}
       {error && <p className="error-message">{error}</p>}
 
-      {/* Video grid displaying fetched videos */}
       <div className="video-grid">
-        {videos.length > 0 ? (
-          videos.map((video) => (
-            <div key={video.id} className="video-card">
-              <a href={video.url} target="_blank" rel="noopener noreferrer" className="video-link">
-                <img src={video.thumbnail} alt={video.title} className="video-thumbnail" />
-                <div className="video-info">
-                  <h2 className="video-title">{video.title}</h2>
-                  <p className="video-description">{video.description}</p>
-                </div>
-              </a>
-              {/* Read aloud button for each video */}
-              <button onClick={() => speak(video.title + '. ' + video.description)} className="tts-button">
-                Read Aloud
-              </button>
-            </div>
-          ))
+        {paginatedVideos.length > 0 ? (
+          paginatedVideos.map(renderVideoCard)
         ) : (
           !loading && <p>No videos found. Try searching for something else.</p>
         )}
+      </div>
+
+      {/* Pagination controls */}
+      <div className="pagination">
+        <button onClick={handlePrevPage} disabled={currentPage === 1}>
+          Previous
+        </button>
+        <span>
+          Page {currentPage} of {totalPages}
+        </span>
+        <button onClick={handleNextPage} disabled={currentPage === totalPages}>
+          Next
+        </button>
       </div>
 
       {isPending && <p>Updating videos...</p>}

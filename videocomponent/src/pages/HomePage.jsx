@@ -5,10 +5,56 @@ const Home = () => {
   const navigate = useNavigate();
 
   const videos = [
-    { id: 1, src: 'https://www.youtube.com/embed/dQw4w9WgXcQ', title: 'Sample Video 1' },
-    { id: 2, src: 'https://www.youtube.com/embed/oHg5SJYRHA0', title: 'Sample Video 2' },
-    { id: 3, src: 'https://www.youtube.com/embed/C0DPdy98e4c', title: 'Sample Video 3' },
-    { id: 4, src: 'https://www.youtube.com/embed/tgbNymZ7vqY', title: 'Sample Video 4' },
+    { 
+      id: 1, 
+      src: 'https://www.youtube.com/embed/8Uc398hnc24', 
+      title: 'Rethinking Postpartum Care | Sara Reardon | TEDxLSU' 
+    },
+    { 
+      id: 2, 
+      src: 'https://www.youtube.com/embed/sLohahqd9s8', 
+      title: 'How postpartum care impacts long-term health | Marcy Crouch | TEDxUTulsa' 
+    },
+    { 
+      id: 3, 
+      src: 'https://www.youtube.com/embed/xwoi_Jsx2zc', 
+      title: 'This is Your Postpartum In 2 Minutes | Glamour' 
+    },
+    { 
+      id: 4, 
+      src: 'https://www.youtube.com/embed/bUrY863QQwU', 
+      title: 'Postpartum Care: Things No One Told You! My TMI Experience' 
+    },
+    { 
+      id: 5, 
+      src: 'https://www.youtube.com/embed/5m9uW8GZpPo', 
+      title: 'Navigating Postpartum Life: Tips and Insights' 
+    },
+    { 
+      id: 6, 
+      src: 'https://www.youtube.com/embed/Yj1AvGBr7qg', 
+      title: 'Understanding Postpartum Depression: What You Need to Know' 
+    },
+    { 
+      id: 7, 
+      src: 'https://www.youtube.com/embed/3zw2d5DgKTE', 
+      title: 'The Importance of Support During Postpartum Recovery' 
+    },
+    { 
+      id: 8, 
+      src: 'https://www.youtube.com/embed/sE3r15h4tnY', 
+      title: 'Postpartum Mental Health: Seeking Help and Support' 
+    },
+    { 
+      id: 9, 
+      src: 'https://www.youtube.com/embed/BhUYZFehQv0', 
+      title: 'Coping with Postpartum Challenges: Personal Stories' 
+    },
+    { 
+      id: 10, 
+      src: 'https://www.youtube.com/embed/JKG6W6Ut8w0', 
+      title: 'Postpartum Recovery: What to Expect' 
+    },
   ];
 
   const articles = [
@@ -17,13 +63,15 @@ const Home = () => {
     { title: 'Mental Health After Pregnancy', description: 'Addressing mental health challenges post-delivery.', link: '/article3' },
     { title: 'Breastfeeding Basics', description: 'Guidelines for successful breastfeeding.', link: '/article4' },
     { title: 'Exercise After Delivery', description: 'Safe exercises to help regain strength.', link: '/article5' },
+    { title: 'Self-Care Strategies for New Moms', description: 'Prioritizing self-care during postpartum.', link: '/article6' },
+    { title: 'Building a Support Network', description: 'The importance of community support for new mothers.', link: '/article7' },
+    { title: 'Managing Postpartum Anxiety', description: 'Tips for coping with anxiety after childbirth.', link: '/article8' },
+    { title: 'Tips for New Dads', description: 'How partners can support new mothers.', link: '/article9' },
+    { title: 'Finding the Right Pediatrician', description: 'What to look for in a pediatrician for your newborn.', link: '/article10' },
   ];
 
   return (
     <div className="home">
-      <h1>Welcome to DeepVital Video Support</h1>
-
-      {/* Video Grid */}
       <h2>Featured Videos</h2>
       <div className="video-grid">
         {videos.map(video => (
@@ -41,7 +89,6 @@ const Home = () => {
         ))}
       </div>
 
-      {/* Article Grid */}
       <h2>Articles</h2>
       <div className="article-grid">
         {articles.map((article, index) => (

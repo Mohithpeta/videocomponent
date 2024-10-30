@@ -1,15 +1,15 @@
 /* Navbar Styles */
 .navbar {
-    background-color: #4A90E2; 
-    padding: 1vw 2vw; 
-    position: fixed; /* Navbar stays fixed at top */
-    width: 100%; 
-    top: 0; 
-    z-index: 100; /* Stay above other elements */
+    background-color: #2D4C6B; /* Softer blue for medical software */
+    padding: 1vw 2vw;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Vertically center items */
-    height: 60px; /* Fixed height to prevent vertical stretching */
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     box-sizing: border-box;
 }
 
@@ -18,49 +18,63 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Set a max-width for better spacing */
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .navbar-logo {
-    font-size: 2vw; /* Scalable font size for logo */
-    color: white; 
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    flex-shrink: 0; /* Prevent the logo from shrinking */
+    color: #FFFFFF; /* White logo text */
+    font-weight: bold; /* Emphasize the logo */
+    flex-shrink: 0;
+}
+
+.navbar-logo img {
+    width: 40px; /* Adjust the logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo image and text */
+}
+
+.navbar-name {
+    font-size: 2vw; /* Responsive font size */
+    color: #FFFFFF; /* White color for the logo name */
 }
 
 .navbar-menu {
     display: flex;
-    gap: 1.5vw; 
-    height: 100%; /* Ensures it doesn't stretch vertically */
-    align-items: center; /* Vertically center items in the navbar */
-    margin-left: auto; /* Push menu to the right */
+    gap: 1.5vw;
+    height: 100%;
+    align-items: center;
+    margin-left: auto; /* Push menu items to the right */
 }
 
 .navbar-item {
-    color: white;
+    color: #FFFFFF; /* White menu item text */
     text-decoration: none;
     padding: 0.8vw 1.2vw;
-    border-radius: 4px;
+    border-radius: 6px; /* Slightly more rounded corners */
     transition: background-color 0.3s, color 0.3s;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
+    font-size: 1rem; /* Standard font size for menu items */
 }
 
 .navbar-item:hover {
-    background-color: rgba(255, 255, 255, 0.2); 
-    color: #FFD700; 
+    background-color: #47A8BD; /* Hover color: medical-themed cyan */
+    color: #FFFFFF;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .navbar-menu {
-        flex-direction: column; 
+        flex-direction: column;
         display: none; /* Hidden by default */
-        position: absolute; 
-        top: 60px; /* Fixed position just below the navbar */
-        right: 0; 
-        background-color: #4A90E2; 
-        width: 100%; 
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #2D4C6B;
+        width: 100%;
         padding: 10px 0;
     }
 
@@ -68,21 +82,40 @@
         display: flex;
     }
 
-    .navbar-logo {
-        font-size: 1.5rem; /* Smaller logo on mobile */
+    .navbar-name {
+        font-size: 1.5rem; /* Adjusted size for mobile */
     }
 }
 
 @media (min-width: 1200px) {
     .navbar {
-        padding: 1vw 5vw; /* Increase padding on larger screens */
+        padding: 1vw 5vw;
     }
 
-    .navbar-logo {
-        font-size: 2.5vw; /* Larger logo for large screens */
+    .navbar-name {
+        font-size: 2.5vw; /* Larger size for larger screens */
     }
 
     .navbar-item {
-        padding: 1vw 1.5vw; /* Larger padding for menu items */
+        padding: 1vw 1.5vw;
+    }
+}
+
+/* Mobile Menu Button (Hamburger Icon) */
+.navbar-toggle {
+    display: none; /* Hidden on larger screens */
+}
+
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Shown on smaller screens */
+        color: #FFFFFF;
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .navbar-menu.active {
+        display: flex;
     }
 }

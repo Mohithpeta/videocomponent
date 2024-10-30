@@ -1,14 +1,14 @@
-// Navbar.js
-
 import { Link } from 'react-router-dom';
 import './Navbar.css'; // Ensure you have a CSS file for styling
+import DVLogo from '../assets/DVLogo.png'; // Import the logo from the assets folder
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          Postpartum Care
+          <img src={DVLogo} alt="DeepVital Logo" className="navbar-logo-img" />
+          DeepVital
         </Link>
         <div className="navbar-menu">
           <Link to="/" className="navbar-item">Home</Link>

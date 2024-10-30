@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/HomePage';
 import VideosPage from './pages/VideosPage';
+import ArticlesPage from './pages/ArticlesPage'; // Import the ArticlesPage
 import Profile from './pages/ProfilePage';
 import ProtectedRoute from './components/ProtectedRoute';
 import { AuthProvider, useAuth } from './context/AuthContext'; // Ensure correct import of useAuth
@@ -26,6 +27,7 @@ const AppContent = () => {
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<GoogleLoginButton />} />
         <Route path="/videos" element={<VideosPage />} />
+        <Route path="/articles" element={<ArticlesPage />} /> {/* New Articles route */}
         
         {/* Protected Routes */}
         <Route 

@@ -1,0 +1,111 @@
+/* src/pages/ArticlesPage.css */
+
+html, body {
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    overscroll-behavior: none; /* Prevents overscroll or bounce on the page */
+}
+
+.articles-page {
+    padding: 2.5vw; /* Adjusted for consistent spacing */
+    width: 100vw; /* Full width */
+    min-height: 100vh; /* Full height */
+    margin: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #e0f7fa, #fffde7);
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-size: 2.8rem; /* Consistent font size with the homepage */
+    margin-bottom: 2vh;
+    text-align: center;
+    color: #00796b; /* Dark teal for headings */
+    font-weight: 700; /* Consistent weight */
+}
+
+.articles-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible layout */
+    gap: 1.5rem;
+    width: 100%; /* Full width for the grid */
+    padding: 1.5vw; /* Added padding for better spacing */
+    box-sizing: border-box;
+}
+
+.article-card {
+    background-color: #ffffff;
+    border: 1px solid #cfd8dc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer; /* Added cursor for interactivity */
+    width: 100%; /* Full width for cards */
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+}
+
+.article-card h2 {
+    font-size: 1.5rem;
+    color: #005f5f; /* Darker teal for titles */
+}
+
+.article-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.read-more-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #00796b; /* Teal for links */
+    border: 2px solid #00796b;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.read-more-link:hover {
+    background-color: #00796b; /* Dark teal background on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    .articles-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* More columns on smaller screens */
+    }
+}
+
+@media (max-width: 1080px) {
+    h1 {
+        font-size: 2rem; /* Smaller heading */
+    }
+    
+    .article-card {
+        padding: 1rem; /* Reduced padding for smaller screens */
+    }
+  
+    .article-card h2 {
+        font-size: 1.25rem; /* Smaller title size */
+    }
+}
+
+@media (min-width: 1920px) {
+    .articles-list {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Larger cards on wide screens */
+    }
+
+    .article-card {
+        padding: 2rem; /* Increased padding for better layout on large screens */
+    }
+}

@@ -7,46 +7,54 @@ import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 const GoogleLoginButton = () => {
   const [formData, setFormData] = useState({
     email: '',
-    password: ''
+    password: '',
   });
 
   const navigate = useNavigate();
 
+  // Handle form input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // Handle email/password login form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/users', formData);
+      const response = await axios.post('http://localhost:5000/api/users/login', formData);
       console.log('Response:', response.data);
+
+      // Store the access token and navigate to homepage
+      localStorage.setItem('accessToken', response.data.accessToken);
       navigate('/HomePage');
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Login Error:', error.response?.data || error.message);
+      alert('Login failed. Please check your credentials and try again.');
     }
   };
 
-  const handleGoogleSuccess = async (response) => {
-    console.log('Google response:', response);
+  // Handle Google login success
+  const handleGoogleSuccess = async (credentialResponse) => {
     try {
-      // Send the token to your backend for verification and sign-in
-      const res = await axios.post('http://localhost:5000/api/auth/google/login', {
-        idToken: response.credential // Use idToken from Google response
+      const res = await axios.post('http://localhost:5000/auth/google/callback', {
+        idToken: credentialResponse.credential, // Send idToken to backend
       });
 
+      // Store JWT token from backend and navigate to homepage
       const { accessToken } = res.data;
       localStorage.setItem('accessToken', accessToken);
-
-      navigate('/HomePage');
+      navigate('/HomePage'); // Adjusted navigation
     } catch (error) {
-      console.error('Error during Google sign-in:', error);
+      console.error('Google Sign-in Error:', error.response?.data || error.message);
+      alert('Google sign-in failed. Please try again.');
     }
   };
 
+  // Handle Google login error
   const handleGoogleError = (error) => {
-    console.error('Google Sign-In error:', error);
+    console.error('Google Sign-in Error:', error);
+    alert('Google Sign-in failed. Please try again.');
   };
 
   return (
@@ -81,12 +89,14 @@ const GoogleLoginButton = () => {
               <GoogleLogin
                 onSuccess={handleGoogleSuccess}
                 onError={handleGoogleError}
+                useOneTap // This enables Google One Tap sign-in, optional
+                auto_select={false}
                 style={{ marginTop: '20px' }}
               />
-              <div className='or'>or</div>
-              <p className='signup'>
-                Don&apos;t have an account? <Link to='/Signup'>Sign Up</Link>
-              </p>
+              <div className='footer'>
+                <p>Dont have an account?</p>
+                <Link to='/signup' className='signup-link'>Sign Up</Link>
+              </div>
             </form>
           </div>
         </div>
@@ -95,122 +105,67 @@ const GoogleLoginButton = () => {
   );
 };
 
+// Styled components for layout and styling
 const StyledWrapper = styled.div`
   .container {
-    height: 100vh;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 0 20px;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
   }
 
   .hero {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    width: 100%;
-  }
-
-  .input {
-    padding: 1rem 1.2rem;
-    margin: 1rem 0;
-    border-radius: 2rem;
-    display: block;
-    width: 80%;
-    border: none;
-    box-shadow: inset 6px 6px 8px rgba(97, 97, 97, 0.075),
-      6px 6px 6px rgba(255, 255, 255, 0.781);
-    outline: none;
-    background-color: inherit;
-    color: rgb(161, 161, 161);
-    font-size: inherit;
+    max-width: 400px;
     text-align: center;
-  }
-
-  .submit, .btn {
-    margin-top: 20px;
-    font-weight: bold;
-    box-shadow: -3px -3px 5px white, 3px 3px 5px rgba(209, 209, 209, 0.705);
-    color: rgb(112, 112, 112);
-    cursor: pointer;
-  }
-
-  .btn {
-    text-align: center;
-    color: black;
   }
 
   .logo {
-    font-size: 3rem;
-    color: black;
-    font-weight: 600;
-    margin-bottom: 30px;
-  }
-
-  ::placeholder {
-    color: rgb(161, 161, 161);
-  }
-
-  .forgotten {
-    text-align: center;
-    font-size: .8rem;
-    width: 80%;
-    color: gray;
-    margin: 15px 0;
-  }
-
-  a {
-    color: inherit;
+    font-size: 32px;
     font-weight: bold;
-    text-decoration: none;
+    margin-bottom: 20px;
+  }
+
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+
+  .input.submit {
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .input.submit:hover {
+    background-color: #0056b3;
   }
 
   .or {
-    position: relative;
-    font-weight: bold;
-    color: rgb(112, 112, 112);
     margin: 20px 0;
+    font-size: 14px;
+    color: #666;
   }
 
-  .or::before, .or::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 1px;
-    top: 50%;
-    margin: 0 6px;
-    background-color: rgba(0, 0, 0, 0.479);
+  .footer {
+    margin-top: 20px;
+    font-size: 14px;
   }
 
-  .or::before {
-    right: 100%;
-  }
-
-  .or::after {
-    left: 100%;
-  }
-
-  .signup {
-    color: green;
-    margin-top: 15px;
-    font-size: 1rem;
+  .signup-link {
+    color: #007BFF;
+    text-decoration: none;
   }
 `;
 
-export default GoogleLoginButton ;
+export default GoogleLoginButton;
