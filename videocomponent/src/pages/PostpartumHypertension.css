@@ -1,0 +1,208 @@
+.postpartum-hypertension {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #1a485d;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  background-color: #FFFFFF;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1A365D;
+  margin-bottom: 2rem;
+  padding-top: 6%;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #E2E8F0;
+  letter-spacing: -0.02em;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #2C5282;
+  margin: 2.5rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #E2E8F0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2D3748;
+  margin: 2rem 0 1rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4A5568;
+  margin: 1.5rem 0 1rem;
+}
+
+p {
+  font-size: 1.0625rem;
+  color: #2D3748;
+  margin-bottom: 1.25rem;
+  line-height: 1.7;
+  
+}
+
+
+/* Strong elements */
+strong {
+  color: #2C5282;
+  font-weight: 600;
+}
+
+/* Images */
+.image {
+  display: block;
+  margin: 2rem auto;
+  max-width: 85%;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.02);
+}
+
+/* Case Studies Section */
+h3 + h4 {
+  color: #3182CE;
+  margin-top: 1rem;
+}
+
+/* Specialist Section */
+h2:last-of-type + p {
+  padding: 1rem 1.5rem;
+  background-color: #EBF8FF;
+  border-left: 4px solid #3182CE;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* Note Styling */
+p strong:first-child {
+  display: inline-block;
+  color: #2C5282;
+  margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1200px) {
+  .postpartum-hypertension {
+      padding: 1.5rem;
+  }
+
+  h1 {
+      font-size: 2.25rem;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  h3 {
+      font-size: 1.25rem;
+  }
+
+  h4 {
+      font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .postpartum-hypertension {
+      padding: 1rem;
+  }
+
+  h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+  }
+
+  h2 {
+      font-size: 1.375rem;
+      margin: 2rem 0 1rem;
+  }
+
+  p {
+      font-size: rem;
+  }
+
+  .image {
+      margin: 1.5rem auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+      font-size: 1.75rem;
+  }
+
+  h2 {
+      font-size: 1.25rem;
+  }
+
+  p {
+      font-size: 0.9375rem;
+  }
+
+  ul {
+      padding-left: 1rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .postpartum-hypertension {
+      padding: 0;
+      max-width: 100%;
+  }
+
+  h1, h2, h3, h4 {
+      page-break-after: avoid;
+  }
+
+  img {
+      max-width: 500px;
+      page-break-inside: avoid;
+  }
+
+  p, li {
+      font-size: 11pt;
+      line-height: 1.5;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .image {
+      transition: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: more) {
+  .postpartum-hypertension {
+      --medical-blue: #004E9A;
+      --text-color: #000000;
+  }
+
+  p, li {
+      color: var(--text-color);
+  }
+
+  h1, h2, h3, h4 {
+      color: var(--medical-blue);
+  }
+}

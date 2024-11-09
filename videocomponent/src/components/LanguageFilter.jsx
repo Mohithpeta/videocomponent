@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import styled from 'styled-components'; // For smooth transition effects and styling
+import axios from 'axios';
+import PropTypes from 'prop-types'; // Import PropTypes for prop validation
 
 // Styled-components for dropdown and container
 const FilterContainer = styled.div`
@@ -26,23 +28,19 @@ const Dropdown = styled.select`
 
 // LanguageFilter Component
 const LanguageFilter = ({ onLanguageChange }) => {
-  // Available languages (with English as default)
-  const availableLanguages = [
-    { code: 'en', name: 'English' },
-    { code: 'hi', name: 'Hindi' },
-    { code: 'bn', name: 'Bengali' },
-    { code: 'te', name: 'Telugu' },
-    { code: 'mr', name: 'Marathi' },
-    { code: 'ta', name: 'Tamil' },
-    { code: 'ur', name: 'Urdu' },
-    { code: 'gu', name: 'Gujarati' },
-    { code: 'kn', name: 'Kannada' },
-    { code: 'ml', name: 'Malayalam' },
-    { code: 'pa', name: 'Punjabi' },
-  ];
-
+  const [availableLanguages, setAvailableLanguages] = useState([]);
   const defaultLanguage = 'en'; // Default language is English
   const [selectedLanguage, setSelectedLanguage] = useState(localStorage.getItem('preferredLanguage') || defaultLanguage);
+
+  // Fetch available languages from the backend
+  const fetchAvailableLanguages = async () => {
+    try {
+      const response = await axios.get('http://localhost:5000/api/languages'); // Adjust the API endpoint as necessary
+      setAvailableLanguages(response.data); // Assuming response.data returns an array of language objects with code and name
+    } catch (error) {
+      console.error('Error fetching available languages:', error);
+    }
+  };
 
   // Handle language change
   const handleLanguageChange = (event) => {
@@ -59,19 +57,31 @@ const LanguageFilter = ({ onLanguageChange }) => {
       setSelectedLanguage(storedLanguage);
       onLanguageChange(storedLanguage); // Apply the language stored in localStorage
     }
+    fetchAvailableLanguages(); // Fetch available languages on mount
   }, [onLanguageChange]);
 
   return (
     <FilterContainer>
       <Dropdown value={selectedLanguage} onChange={handleLanguageChange}>
-        {availableLanguages.map((language) => (
-          <option key={language.code} value={language.code}>
-            {language.name}
+        {availableLanguages.length > 0 ? (
+          availableLanguages.map((language) => (
+            <option key={language.code} value={language.code}>
+              {language.name}
+            </option>
+          ))
+        ) : (
+          <option value="" disabled>
+            Loading languages...
           </option>
-        ))}
+        )}
       </Dropdown>
     </FilterContainer>
   );
+};
+
+// Prop validation
+LanguageFilter.propTypes = {
+  onLanguageChange: PropTypes.func.isRequired, // Require the onLanguageChange prop to be a function
 };
 
 export default LanguageFilter;

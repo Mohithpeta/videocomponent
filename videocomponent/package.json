@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "react-scripts start"
   },
   "dependencies": {
     "@react-oauth/google": "^0.12.1",
@@ -22,6 +23,7 @@
     "fuzzysearch": "^1.0.3",
     "gapi-script": "^1.2.0",
     "jsonwebtoken": "^9.0.2",
+    "lucide-react": "^0.454.0",
     "mongoose": "^8.7.1",
     "passport": "^0.7.0",
     "passport-google-oauth2": "^0.2.0",

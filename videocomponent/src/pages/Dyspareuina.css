@@ -1,0 +1,182 @@
+/* Dyspareunia.css */
+.dyspareunia {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+  }
+  
+  .dyspareunia .article-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #e83e8c;
+  }
+  
+  .dyspareunia h1 {
+    font-size: 2.5rem;
+    color: #721c47;
+    margin-bottom: 1rem;
+  }
+  
+  .dyspareunia .intro-text {
+    font-size: 1.1rem;
+    color: #4a5568;
+  }
+  
+  .dyspareunia h2 {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin: 2rem 0 1rem;
+    padding-left: 0.5rem;
+    border-left: 4px solid #e83e8c;
+  }
+  
+  .dyspareunia .type {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #fdf2f7;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dyspareunia .type h3 {
+    font-size: 1.4rem;
+    color: #721c47;
+    margin-bottom: 1rem;
+  }
+  
+  .dyspareunia section {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dyspareunia .factors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .dyspareunia .factor {
+    padding: 1.5rem;
+    background-color: #fdf2f7;
+    border-radius: 8px;
+  }
+  
+  .dyspareunia .treatment-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  
+  .dyspareunia .option {
+    padding: 1.5rem;
+    background-color: #fdf2f7;
+    border-radius: 8px;
+  }
+  
+  .dyspareunia .case-studies .study {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: #fdf2f7;
+    border-radius: 8px;
+  }
+  
+  .dyspareunia ul,
+  .dyspareunia ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  
+  .dyspareunia li {
+    margin-bottom: 0.8rem;
+    color: #4a5568;
+    font-size: 1.1rem;
+  }
+  
+  .dyspareunia strong {
+    color: #721c47;
+    font-weight: 600;
+  }
+  .dyspareunia image {
+    width:85%;
+    max-width: 1800px;
+    align-items: center;
+    
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1920px) {
+    .dyspareunia {
+      padding: 1rem;
+    }
+  
+    .dyspareunia h1 {
+      font-size: 2rem;
+    }
+  
+    .dyspareunia h2 {
+      font-size: 1.5rem;
+    }
+  
+    .dyspareunia section {
+      padding: 1rem;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .dyspareunia {
+      padding: 0;
+    }
+  
+    .dyspareunia section {
+      box-shadow: none;
+      border: 1px solid #e2e8f0;
+      break-inside: avoid;
+    }
+  
+    .dyspareunia h2 {
+      page-break-after: avoid;
+    }
+  }
+  
+  /* Hover Effects */
+  .dyspareunia section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .dyspareunia section:hover {
+      transform: none;
+      transition: none;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: more) {
+    .dyspareunia {
+      background-color: white;
+      color: black;
+    }
+  
+    .dyspareunia h1,
+    .dyspareunia h2,
+    .dyspareunia strong {
+      color: #4a1130;
+    }
+  
+    .dyspareunia section {
+      border: 2px solid #721c47;
+    }
+  }

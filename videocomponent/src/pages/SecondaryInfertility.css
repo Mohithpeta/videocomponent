@@ -1,0 +1,127 @@
+/* SecondaryInfertility.css */
+.infertility-info {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+  }
+  
+  .infertility-info h1 {
+    font-size: 2.5rem;
+    color: #2c5282;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .infertility-info .infertility-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .infertility-info p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    margin-bottom: 1.2rem;
+  }
+  
+  .infertility-info h2 {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    border-left: 4px solid #4299e1;
+  }
+  
+  .infertility-info ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  
+  .infertility-info li {
+    margin-bottom: 0.8rem;
+    color: #4a5568;
+    font-size: 1.1rem;
+  }
+  
+  .infertility-info strong {
+    color: #2c5282;
+    font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1920px) {
+    .infertility-info {
+      padding: 1rem;
+    }
+  
+    .infertility-info h1 {
+      font-size: 2rem;
+    }
+  
+    .infertility-info h2 {
+      font-size: 1.5rem;
+    }
+  
+    .infertility-info p,
+    .infertility-info li {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .infertility-info {
+      padding: 0;
+    }
+  
+    .infertility-info .infertility-section {
+      box-shadow: none;
+      border: 1px solid #e2e8f0;
+      break-inside: avoid;
+    }
+  
+    .infertility-info h2 {
+      page-break-after: avoid;
+    }
+  }
+  
+  /* Hover Effects */
+  .infertility-info .infertility-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .infertility-info .infertility-section:hover {
+      transform: none;
+      transition: none;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: more) {
+    .infertility-info {
+      background-color: white;
+      color: black;
+    }
+  
+    .infertility-info h1,
+    .infertility-info h2,
+    .infertility-info strong {
+      color: #1a365d;
+    }
+  
+    .infertility-info .infertility-section {
+      border: 2px solid #2c5282;
+    }
+  }
+  

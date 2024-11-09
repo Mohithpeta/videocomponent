@@ -1,80 +1,92 @@
-// src/pages/ArticlesPage.jsx
 import { useState, useEffect } from 'react';
-import './ArticlesPage.css';
+import { ChevronDown, Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import './ArticlesPage.css'
 
 const ArticlesPage = () => {
   const [articles, setArticles] = useState([]);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [expandedItems, setExpandedItems] = useState({});
+
+  const subtopics = [
+    'Symptoms',
+    'Risk Factors',
+    'Screening',
+    'Diagnosis',
+    'Treatment',
+    'Case Studies',
+    'Specialists'
+  ];
 
   useEffect(() => {
     const fetchArticles = async () => {
-      // Postpartum-related mock data
       const mockArticles = [
         {
           id: 1,
           title: 'POSTPARTUM HYPERTENSION',
           description: 'Postpartum Hypertension is characterized by a systolic blood pressure (SBP) of ≥ 140 mmHg and diastolic blood pressure (DBP) of ≥ 90 mmHg',
-          link: '/articles/postpartum-care-tips',
+          link: '/articles/postpartum-hypertension',
         },
         {
           id: 2,
-          title: 'ANAL INCONSISTENCE',
+          title: 'ANAL INCONTINENCE',
           description: 'Anal Incontinence is the reporting of incontinence of stool monthly or more, incontinence of flatus weekly or more, or combinations of two or more incontinence symptoms including fecal urgency.',
-          link: '/articles/postpartum-depression',
+          link: '/articles/anal-incontinence',
         },
         {
           id: 3,
-          title: 'URINARY INCONSISTENCE',
-          description: 'Urinary incontinence is the involuntary loss of urine, which can significantly affect a woman\'s health and quality of life. It can increase the risk of urinary tract infections, skin ulceration, falls, fractures, and interfere with work, social activities, sexual function, and independence.',
-          link: '/articles/postpartum-nutrition-exercise',
+          title: 'URINARY INCONTINENCE',
+          description: 'Urinary incontinence is the involuntary loss of urine, which can significantly affect a woman\'s health and quality of life.',
+          link: '/articles/urinary-incontinence',
         },
         {
           id: 4,
           title: 'GESTATIONAL DIABETES',
           description: 'Gestational diabetes refers to any level of glucose intolerance that begins or is first identified during pregnancy.',
-          link: '/articles/breastfeeding-guide',
+          link: '/articles/gestational-diabetes',
         },
         {
           id: 5,
           title: 'DYSPAREUNIA',
-          description: 'Dyspareunia, characterized by recurrent or persistent painful sexual intercourse, is a prevalent condition that can significantly impact women\'s mental and physical health, as well as their relationships. ',
-          link: '/articles/postpartum-anxiety-management',
+          description: 'Dyspareunia, characterized by recurrent or persistent painful sexual intercourse, is a prevalent condition.',
+          link: '/articles/dyspareunia',
         },
         {
           id: 6,
           title: 'PELVIC ORGAN PROLAPSE',
-          description: 'Pelvic organ prolapse, also known as urogenital prolapse, refers to the downward displacement of pelvic organs, leading to the protrusion of the vagina, uterus, or both. ',
-          link: '/articles/postpartum-sleep-recovery',
+          description: 'Pelvic organ prolapse refers to the downward displacement of pelvic organs.',
+          link: '/articles/pelvic-organ-prolapse',
         },
         {
           id: 7,
           title: 'OBESITY',
-          description: 'Overweight and obese are defined as “abnormal or excessive fat accumulation that may impair health”. It is measured by BMI of greater than 30 kg/m².',
-          link: '/articles/postpartum-return-to-work',
+          description: 'Overweight and obese are defined as abnormal or excessive fat accumulation that may impair health.',
+          link: '/articles/obesity',
         },
         {
           id: 8,
           title: 'BACK PAIN',
-          description: 'Postpartum back pain is discomfort experienced after childbirth, often due to physical strain during pregnancy and changes in posture and musculoskeletal support.',
-          link: '/articles/postpartum-skin-hair-care',
+          description: 'Postpartum back pain is discomfort experienced after childbirth.',
+          link: '/articles/back-pain',
         },
         {
           id: 9,
           title: 'DEPRESSION',
-          description: 'Postpartum depression is a common but treatable mental health disorder that often arises after childbirth, making it one of the most frequent complications of childbearing',
-          link: '/articles/postpartum-support-community',
+          description: 'Postpartum depression is a common but treatable mental health disorder.',
+          link: '/articles/depression',
         },
         {
           id: 10,
           title: 'ANXIETY',
-          description: ' Postpartum anxiety is a mental health condition that affects women after childbirth, typically within the first four weeks. It is characterized by excessive worry, tension, fatigue, irritability, difficulty concentrating, and insomnia. ',
-          link: '/articles/postpartum-physical-therapy',
+          description: 'Postpartum anxiety is a mental health condition that affects women after childbirth.',
+          link: '/articles/anxiety',
         },
         {
-            id: 11,
-            title: 'SECONDARY INFERTILITY',
-            description: ' Secondary infertility refers to couples who are unable to conceive after a year of unprotected intercourse following a previous pregnancy. ',
-            link: '/articles/postpartum-physical-therapy',
-          },
+          id: 11,
+          title: 'SECONDARY INFERTILITY',
+          description: 'Secondary infertility refers to couples who are unable to conceive after a previous pregnancy.',
+          link: '/articles/secondary-infertility',
+        },
       ];
       setArticles(mockArticles);
     };
@@ -82,19 +94,90 @@ const ArticlesPage = () => {
     fetchArticles();
   }, []);
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const toggleExpanded = (id) => {
+    setExpandedItems(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
   return (
-    <div className="articles-page">
-      <h1>Articles on Postpartum Care</h1>
-      <div className="articles-list">
-        {articles.map((article) => (
-          <div key={article.id} className="article-card">
-            <h2>{article.title}</h2>
-            <p>{article.description}</p>
-            <a href={article.link} className="read-more-link" aria-label={`Read more about ${article.title}`}>
-              Read More
-            </a>
+    <div className="min-h-screen bg-gray-50">
+      {/* Mobile Menu Button */}
+      <button 
+        onClick={toggleSidebar}
+        className="fixed top-4 left-4 z-50 p-2 bg-white rounded-md shadow-md md:hidden"
+      >
+        {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
+      </button>
+
+      {/* Sidebar */}
+      <div className={`
+        fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40
+        ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}
+        md:translate-x-0
+      `}>
+        <div className="p-4 h-full overflow-y-auto">
+          <h2 className="text-xl font-bold mb-6 pt-12 md:pt-4">Topics</h2>
+          <nav>
+            {articles.map((article) => (
+              <div key={article.id} className="mb-2">
+                <button
+                  onClick={() => toggleExpanded(article.id)}
+                  className="w-full flex items-center justify-between p-2 text-left hover:bg-gray-100 rounded"
+                >
+                  <span className="text-sm font-medium">{article.title}</span>
+                  <ChevronDown 
+                    className={`transform transition-transform ${expandedItems[article.id] ? 'rotate-180' : ''}`}
+                    size={16}
+                  />
+                </button>
+                {expandedItems[article.id] && (
+                  <div className="ml-4 mt-1 space-y-1">
+                    {subtopics.map((subtopic) => (
+                      <Link
+                        key={subtopic}
+                        to={`${article.link}/${subtopic.toLowerCase().replace(' ', '-')}`}
+                        className="block p-2 text-sm text-gray-600 hover:bg-gray-100 rounded"
+                      >
+                        {subtopic}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className={`
+        transition-all duration-300 ease-in-out
+        md:ml-64 
+      `}>
+        <div className="p-8">
+          <h1 className="text-3xl font-bold mb-8">Articles on Postpartum Care</h1>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {articles.map((article) => (
+              <div key={article.id} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h2 className="text-xl font-semibold mb-3">{article.title}</h2>
+                <p className="text-gray-600 mb-4">{article.description}</p>
+                <Link
+                  to={article.link}
+                  className="text-blue-600 hover:text-blue-800 font-medium"
+                  aria-label={`Read more about ${article.title}`}
+                >
+                  Read More →
+                </Link>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

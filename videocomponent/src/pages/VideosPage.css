@@ -47,6 +47,35 @@ body, .home {
   position: relative; /* Relative to position correctly */
 }
 
+/* Filter buttons container */
+.filter-buttons {
+  display: flex;
+  justify-content: center; /* Centering the filter buttons */
+  gap: 1vw; /* Space between buttons */
+  margin-bottom: 2vh; /* Space below the buttons */
+}
+
+/* Filter button styles */
+.filter-button {
+  background-color: #007bff; /* Original color */
+  color: white; /* Text color */
+  border: 1px solid #007bff; /* Match border with background */
+  border-radius: 5px; /* Rounded corners */
+  padding: 0.5vh 1vw; /* Padding for a better touch area */
+  margin: 0.5vh 1vw; /* Space between each filter */
+  font-size: 1rem; /* Consistent font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s; /* Smooth transitions */
+}
+
+/* Hover effect for filter buttons */
+.filter-button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+
+
 .search-input {
   padding: 1vh;
   width: 40vw;

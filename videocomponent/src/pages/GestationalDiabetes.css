@@ -1,0 +1,165 @@
+/* GestationalDiabetes.css */
+
+.gestational-diabetes {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+  }
+  
+  .gestational-diabetes h1 {
+    font-size: 2.5rem;
+    color: #2c5282;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid #4299e1;
+  }
+  
+  .gestational-diabetes h2 {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin: 2rem 0 1rem;
+    padding-left: 0.5rem;
+    border-left: 4px solid #4299e1;
+  }
+  
+  .gestational-diabetes h3 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin: 1.5rem 0 1rem;
+  }
+  
+  .gestational-diabetes h4 {
+    font-size: 1.3rem;
+    color: #2d3748;
+    margin: 1.2rem 0 0.8rem;
+  }
+  .image{
+    display: block;
+    margin: 2rem auto;
+    width: 85%;
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .gestational-diabetes section {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background-color: #f7fafc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+  }
+  
+  .gestational-diabetes p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+    color: #4a5568;
+  }
+  
+  .gestational-diabetes ul,
+  .gestational-diabetes ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  
+  .gestational-diabetes li {
+    margin-bottom: 0.8rem;
+    color: #4a5568;
+    font-size: 1.1rem;
+  }
+  
+  .gestational-diabetes strong {
+    color: #2c5282;
+    font-weight: 600;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 1920px) {
+    .gestational-diabetes {
+      padding: 1rem;
+    }
+  
+    .gestational-diabetes h1 {
+      font-size: 2rem;
+    }
+  
+    .gestational-diabetes h2 {
+      font-size: 1.5rem;
+    }
+  
+    .gestational-diabetes h3 {
+      font-size: 1.3rem;
+    }
+  
+    .gestational-diabetes h4 {
+      font-size: 1.1rem;
+    }
+  
+    .gestational-diabetes section {
+      padding: 1rem;
+    }
+  
+    .gestational-diabetes p,
+    .gestational-diabetes li {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .gestational-diabetes {
+      padding: 0;
+    }
+  
+    .gestational-diabetes section {
+      box-shadow: none;
+      border: 1px solid #e2e8f0;
+      break-inside: avoid;
+    }
+  
+    .gestational-diabetes h2,
+    .gestational-diabetes h3,
+    .gestational-diabetes h4 {
+      page-break-after: avoid;
+    }
+  }
+  
+  /* Hover Effects */
+  .gestational-diabetes section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .gestational-diabetes section:hover {
+      transform: none;
+      transition: none;
+    }
+  }
+  
+  /* High Contrast Mode */
+  @media (prefers-contrast: more) {
+    .gestational-diabetes {
+      background-color: white;
+      color: black;
+    }
+  
+    .gestational-diabetes h1,
+    .gestational-diabetes h2,
+    .gestational-diabetes h3,
+    .gestational-diabetes h4,
+    .gestational-diabetes strong {
+      color: #1a365d;
+    }
+  
+    .gestational-diabetes section {
+      border: 2px solid #2c5282;
+    }
+  }
+  

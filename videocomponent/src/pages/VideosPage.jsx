@@ -90,6 +90,12 @@ const VideosPage = () => {
     }
   };
 
+  const handleFilter = (filter) => {
+    startTransition(() => {
+      fetchVideos(filter); // Use the filter as the query for fetching videos
+    });
+  };
+
   // Pagination logic
   const totalPages = Math.ceil(videos.length / videosPerPage);
   const paginatedVideos = videos.slice(
@@ -121,6 +127,21 @@ const VideosPage = () => {
     </div>
   );
 
+  // Define your filter options
+  const filters = [
+    "Postpartum hypertension",
+    "Anal incontinence",
+    "Urinary incontinence",
+    "Gestational diabetes",
+    "Dyspareunia",
+    "Pelvic organ prolapse",
+    "Obesity",
+    "Back pain",
+    "Depression",
+    "Anxiety",
+    "Secondary infertility",
+  ];
+
   return (
     <div className="videos-page">
       <h1 className="page-title">Video Resources</h1>
@@ -137,6 +158,19 @@ const VideosPage = () => {
           Search
         </button>
       </form>
+
+      <div className="filters">
+        {filters.map(filter => (
+          <button
+            key={filter}
+            className="filter-button"
+            onClick={() => handleFilter(filter)}
+            disabled={loading}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
 
       {loading && <p className="loading-message">Loading videos...</p>}
       {error && <p className="error-message">{error}</p>}
