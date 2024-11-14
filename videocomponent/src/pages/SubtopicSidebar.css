@@ -1,0 +1,83 @@
+/* Subtopic Sidebar Styles */
+
+.subtopic-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25vw;
+    height: 100vh;
+    background-color: #f4f4f4;
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: width 0.3s ease;
+    max-width: 275px;
+    margin-top: 3.6rem;
+}
+
+/* Hover effect to slightly expand the sidebar */
+.subtopic-sidebar:hover {
+    width: 270px;
+}
+
+/* Top Image Section */
+.subtopic-sidebar .image-container {
+    height: 40%; /* Slightly increased height for visual balance */
+    background-image: url('./assets/Anxiety.png'); /* Add your image URL here */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+/* Zoom effect on image hover */
+.subtopic-sidebar .image-container:hover {
+    transform: scale(1.05);
+}
+
+/* Bottom Subtopics Section */
+.subtopic-sidebar .subtopics-list {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.3rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Subtopic List Item */
+.subtopic-sidebar .subtopic-item {
+    background-color: #fff;
+    padding: 0.85rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect for subtopic items */
+.subtopic-sidebar .subtopic-item:hover {
+    background-color: #3498db;
+    color: #ffffff;
+    transform: translateX(8px);
+}
+
+/* Link Styling */
+.subtopic-sidebar .subtopic-item a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    font-size: 1.05rem;
+    display: block; /* Ensures full clickable area */
+}
+
+/* Link hover styling */
+.subtopic-sidebar .subtopic-item a:hover {
+    color: #ffffff;
+}

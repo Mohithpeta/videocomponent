@@ -1,7 +1,4 @@
 :root {
-    --sidebar-width: 280px;
-    --sidebar-max-width: 280px;
-    /* Professional medical color palette */
     --medical-primary: #1A365D;    /* Deep medical blue */
     --medical-secondary: #2C5282;  /* Secondary blue */
     --medical-accent: #00A3C4;     /* Bright accent */
@@ -28,174 +25,28 @@ body {
 }
 
 .min-h-screen {
-    display: grid;
-    grid-template-areas: "sidebar main";
-    grid-template-columns: var(--sidebar-width) 1fr;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     max-width: 1920px;
     margin: 0 auto;
     background: var(--white);
+    padding-left: 3rem;
 }
 
-/* Professional Sidebar Styling */
-.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: var(--sidebar-width);
-    height: 100vh;
-    background: var(--white);
-    border-right: 1px solid var(--medical-gray-200);
-    overflow-y: auto;
-    z-index: 40;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.03);
-}
-
-.fixed::-webkit-scrollbar {
-    width: 4px;
-}
-
-.fixed::-webkit-scrollbar-track {
-    background: var(--medical-gray-100);
-}
-
-.fixed::-webkit-scrollbar-thumb {
-    background-color: var(--medical-gray-300);
-    border-radius: 2px;
-}
-
-.fixed::-webkit-scrollbar-thumb:hover {
-    background-color: var(--medical-gray-400);
-}
-
-/* Refined Sidebar Content */
-.p-4.h-full {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem 0;
-}
-
-.sidebar-title {
-    font-size: 1.25rem;
-    color: var(--medical-primary);
-    font-weight: 600;
-    padding: 0 1.5rem 1.25rem;
-    margin: 0 0 1rem;
-    border-bottom: 1px solid var(--medical-gray-200);
-    letter-spacing: -0.01em;
-}
-
-/* Sidebar Navigation Container */
-.sidebar-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    padding: 0 0.75rem;
-}
-
-/* Main Topics */
-.sidebar-topic {
-    position: relative;
-    font-size: 0.9375rem;
-    color: var(--medical-gray-700);
-    font-weight: 500;
-    padding: 0.75rem 1rem;
-    margin: 0.125rem 0;
-    cursor: pointer;
-    border-radius: 0.375rem;
-    transition: all 0.2s ease;
-    background: transparent;
-    height: 2.5rem;
-    display: flex;
-    align-items: center;
-    user-select: none;
-}
-
-.sidebar-topic:hover {
-    color: var(--medical-primary);
-    background-color: var(--medical-gray-100);
-}
-
-.sidebar-topic.active {
-    color: var(--medical-primary);
-    background-color: var(--medical-gray-100);
-    font-weight: 600;
-}
-
-/* Subtopics Container */
-.subtopics-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.125rem;
-    padding: 0.25rem 0 0.5rem 1.25rem;
-}
-
-/* Subtopics */
-.sidebar-subtopic {
-    position: relative;
-    font-size: 0.875rem;
-    color: var(--medical-gray-600);
-    padding: 0.625rem 1rem;
-    height: 2.25rem;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border-radius: 0.375rem;
-    transition: all 0.2s ease;
-    background: transparent;
-    margin: 0.125rem 0;
-}
-
-.sidebar-subtopic::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: var(--medical-gray-400);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-.sidebar-subtopic:hover {
-    color: var(--medical-primary);
-    background-color: var(--medical-gray-50);
-}
-
-.sidebar-subtopic:hover::before {
-    opacity: 1;
-    background-color: var(--medical-accent);
-}
-
-.sidebar-subtopic.active {
-    color: var(--medical-primary);
-    background-color: var(--medical-gray-50);
-    font-weight: 500;
-}
-
-.sidebar-subtopic.active::before {
-    opacity: 1;
-    background-color: var(--medical-accent);
-}
-
-/* Main Content Area */
 .transition-all {
-    grid-area: main;
     width: 100%;
     padding: 2rem 2.5rem;
     background-color: var(--medical-gray-50);
     min-height: 100vh;
 }
 
-/* Grid Layout */
+/* Grid Layout for Main Content */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
     gap: 1.75rem;
-    max-width: calc(1920px - var(--sidebar-width));
+    max-width: 100vw;
     width: 100%;
     margin: 0 auto;
     padding: 0.5rem;
@@ -275,11 +126,10 @@ body {
 @media screen and (max-width: 1920px) {
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        max-width: 100%;
     }
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1920px) {
     .grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
@@ -293,21 +143,6 @@ body {
 
 @media screen and (max-width: 768px) {
     .min-h-screen {
-        grid-template-areas: "main";
-        grid-template-columns: 1fr;
-    }
-
-    .fixed {
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .fixed.translate-x-0 {
-        transform: translateX(0);
-    }
-
-    .transition-all {
-        margin-left: 0;
         padding: 1.5rem;
     }
 

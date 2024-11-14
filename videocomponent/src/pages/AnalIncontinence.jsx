@@ -1,19 +1,23 @@
 
 import './AnalIncontinence.css';
-import AnalIncontinenc from './assets/Anal Incontinence.png'
-import AnalIncontinence1 from './assets/Anal Incontinence(1).png'
+import AnalIncontinenc from './assets/Anal Incontinence.png';
+import AnalIncontinence1 from './assets/Anal Incontinence(1).png';
+import SubtopicSidebar from './SubtopicSidebar';
 
 const AnalIncontinence = () => {
   return (
-    <article className="anal-incontinence">
+    <div className='main'>
+    <article className="urinary-incontinence-article" >
       <header className="article-header">
         <h1>Anal Incontinence</h1>
+        <section>
         <p className="intro-text">
           Anal Incontinence is the reporting of incontinence of stool monthly or more, incontinence of flatus weekly or more, or combinations of two or more incontinence symptoms including fecal urgency. This is not a life-threatening condition but has negative effects on social and psychological areas.
         </p>
+        </section>
       </header>
-        
-        <img src={AnalIncontinenc} alt='' className='image' style={{width:'85%'}}/>
+      
+    
       <section className="types">
         <h2>Types of Anal Incontinence</h2>
         <div className="type">
@@ -34,9 +38,6 @@ const AnalIncontinence = () => {
             A combination of both urge and stress incontinence, where patients exhibit symptoms of both types.
           </p>
         </div>
-      </section>
-
-      <section className="postpartum-incontinence">
         <h2>Postpartum Anal Incontinence</h2>
         <p>
           Most of the incontinence developed postpartum is usually urge incontinence. Delivery is considered the most important risk factor for FI (faecal incontinence) in adult women, with reported prevalence rates of 10–27% for incontinence of feces and 18–25% for flatus, at six weeks postpartum.
@@ -45,8 +46,17 @@ const AnalIncontinence = () => {
           At six months postpartum, the prevalence rates are 8–17% and 18–27%, respectively, depending on mode of delivery and perineal injury. Postpartum FI is often associated with anal sphincter injury. The reported incidence of anal sphincter injury diagnosed by endoanal ultrasonography in primiparous women is 26.9%, decreasing to 8.5% after subsequent vaginal deliveries.
         </p>
       </section>
+      <section id="symptoms">  
+        <img src={AnalIncontinenc} alt='' className='image' style={{width:'85%'}}/>
+        </section>
 
-      <section className="screening">
+
+
+      <section className="risk-factors" id='risk-factors'>
+        <h2>Risk Factors</h2>
+        <img src={AnalIncontinence1} alt='Analincontinence rist factors' className='image' style={{width:'85%'}}/>
+        </section>
+        <section className="screening" id='screening'>
         <h2>SCREENING</h2>
         <p>
         Women reporting occasional incontinence to flatus during pregnancy have been found to be at higher risk for subsequent FI, regardless of the findings from anal endosonography. While caesarean delivery poses a lower risk of anal incontinence compared to vaginal delivery, it still presents a higher risk than not giving birth. Pregnancy-related factors, including hormonal and mechanical changes, can contribute to anal incontinence, making postpartum women susceptible regardless of the delivery method.
@@ -58,11 +68,8 @@ const AnalIncontinence = () => {
           <li>The presence of two or more symptoms of incontinence, including faecal urgency.</li>
         </ul>
       </section>
-
-      <section className="diagnosis">
-        <h2>Rist Factors</h2>
-        <img src={AnalIncontinence1} alt='Analincontinence rist factors' className='image' style={{width:'85%'}}/>
-        <h2>Diagnosis</h2>
+      <section id='diagnosis'>
+        <h2>DIAGNOSIS</h2>
         <p>
         Anal incontinence is often associated with injuries to the anal sphincter, particularly in postpartum women. Third- or fourth-degree sphincter ruptures during delivery are primary markers for postpartum fecal incontinence (FI). However, its important to note that while there is strong evidence linking these injuries to postpartum FI, this does not confirm a direct cause-and-effect relationship. The presence of multiple risk factors, such as prolonged labor or the use of forceps, complicates the interpretation of these associations.
         </p>
@@ -73,8 +80,8 @@ const AnalIncontinence = () => {
         <p>A population study in Sweden found that the average time to diagnose anal incontinence was about 13.58 years after caesarean delivery and 17.48 years after vaginal delivery, with notable spikes in diagnosis within the first two years post-delivery and around 30 years later. This highlights that it’s never too late to diagnose anal incontinence, and anyone who has gone through pregnancy remains at risk.</p>
       </section>
 
-      <section className="treatment">
-  <h2>Treatment and Prevention</h2>
+      <section className="treatment" id='treatment'>
+  <h2>TREATMENT AND PREVENTION</h2>
   <p><strong>Biofeedback Training</strong>: </p>
   <p><b>Modalities:</b>Sensory biofeedback, audiovisual biofeedback, intraanal electromyographic biofeedback</p>
   <p><b>Objective:</b></p>
@@ -94,7 +101,7 @@ const AnalIncontinence = () => {
   <p><i>Other surgeries</i>Doctors may perform other surgeries to treat the causes of fecal incontinence, such as hemorrhoids, rectocele and rectal prolapse.</p>
 </section>
 
-<section className="case-studies">
+<section className="case-studies" id='case-studies'>
   <h2>CASE STUDIES</h2>
   <p>The following are various case studies conducted across countries with different economic backgrounds, focusing on the control, prevention, and treatment of postpartum anal incontinence.</p>
   <h3>Study in High-Income Countries</h3>
@@ -109,12 +116,14 @@ const AnalIncontinence = () => {
   <h3>Study in Low-Income Countries</h3>
   <p><strong>Intervention</strong>: Medical assistants instructed women on performing Kegel exercises, with follow-up via home visits and phone calls to ensure adherence.</p>
   <p><strong>Results</strong>: The rate of fecal incontinence was 3.0%, with a cumulative rate of anal incontinence at 13.5%, higher than previous reports. African women were found to have stronger pelvic floor support, possibly explaining lower incontinence rates compared to Caucasian women.</p>
-
-  <h3>SPECIALISTS</h3>
+  </section>
+  <section id='specialists'>
+  <h2>SPECIALISTS</h2>
   <p>Urogynaecologist, OB-GYN, Gastroenterologist, Colorectal surgeon, Proctologist.</p>
 </section>
-
+<SubtopicSidebar />
     </article>
+    </div>
   );
 };
 

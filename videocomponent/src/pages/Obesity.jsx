@@ -1,10 +1,12 @@
 
 import './Obesity.css';
 import Obesity1 from './assets/Obesity.png';
+import SubtopicSidebar from './SubtopicSidebar';
 
 const Obesity = () => {
   return (
-    <div className="obesity">
+    <div className="main">
+      <article className='urinary-incontinence-article'>
       <div className="article-header">
         <h1>OBESITY</h1>
         <p className="intro-text">
@@ -32,12 +34,12 @@ const Obesity = () => {
         <p>There is evidence that suggests a bidirectional link between obesity and depression.Depressed people are more likely to gain weight due to poor nutritional choices and reduced physical activity.</p>
         <p><strong>Obese pregnant women are also at an elevated rist of experiencing both antenatal and postnatal depression and anxiety symptoms compared to those with a normal weight.</strong></p>
       </section>
-      <section>
+      <section id='risk-factors'>
         <img src={Obesity1} alt="Obesity risk factors" style={{width:'85%'}} />
       </section>
 
-      <section className="screening">
-        <h2>SCREENING AND DIAGNOSIS</h2>
+      <section className="screening" id='screening'>
+        <h2>SCREENING</h2>
         <div className="bmi-ranges">
             <p>Usual postpartum visits include the evaluation of weight to determine whether there is weight retention after 6-12 months of delivery. Starting at 25.0, the higher your BMI, the greater is the risk of developing obesity-related health problems. These ranges of BMI are used to describe levels of risk:</p>
           <h3>BMI Classifications:</h3>
@@ -47,9 +49,13 @@ const Obesity = () => {
             <li>Class 2 (moderate-risk) obesity: 35.0 to 39.9</li>
             <li>Class 3 (high-risk) obesity: ≥40.0</li>
           </ul>
-          <p>Women with a waist size greater than 35 inches (89 centimeters) have an increased risk for heart disease and type 2 diabetes. People with apple-shaped bodies (waist is bigger than the hips) also have an increased risk for these conditions.
-          </p>
+         
         </div>
+      </section>
+      <section id='diagnosis'>
+        <h2>DIAGNOSIS</h2>
+      <p>Women with a waist size greater than 35 inches (89 centimeters) have an increased risk for heart disease and type 2 diabetes. People with apple-shaped bodies (waist is bigger than the hips) also have an increased risk for these conditions.
+      </p>
       </section>
 
       <section className="management">
@@ -84,7 +90,7 @@ const Obesity = () => {
         </div>
       </section>
 
-      <section className="case-studies">
+      <section className="case-studies" id='case-studies'>
         <h2>CASE STUDIES</h2>
         <p><strong>Randomized controlled trail of Home-Based lifestyle therapy on postpartum weight in undeserved women with overweight or obesity</strong></p>
         <div className="study">
@@ -120,10 +126,12 @@ const Obesity = () => {
           </p>
         </div>
       </section>
-      <section className="specialists">
+      <section className="specialists" id='specialists'>
         <h2>SPECIALISTS</h2>
          <p>OB/GYN, Endocrinologist, Dietician/Nutritionist, Bariatric specialist, Gastroenterologist.</p>
       </section>
+      <SubtopicSidebar />
+      </article>
     </div>
   );
 };

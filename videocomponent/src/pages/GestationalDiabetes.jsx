@@ -2,10 +2,12 @@
 import './GestationalDiabetes.css';
 import Gestational from './assets/Gestational Diabetes.png';
 import Gestational1 from './assets/Gestational Diabetes(1).png';
+import SubtopicSidebar from './SubtopicSidebar';
 
 const GestationalDiabetes = () => {
   return (
-    <div className="gestational-diabetes">
+    <div className="main">
+      <article className='urinary-incontinence-article'>
       <h1>Gestational Diabetes</h1>
       
       <section>
@@ -51,7 +53,7 @@ const GestationalDiabetes = () => {
 
       
 
-      <section>
+      <section id='symptoms'>
         <h2>Symptoms</h2>
         <p>
           Gestational diabetes often has no noticeable signs or symptoms. Possible symptoms include increased thirst and frequent urination.
@@ -59,7 +61,7 @@ const GestationalDiabetes = () => {
         <img src={Gestational} alt="gestational diabetes" style={{width:'85%'}} className='image'/>
       </section>
 
-      <section>
+      <section id='risk-factors'>
         <h2>Risk Factors due to GDM</h2>
         <ul>
           <li>Increased incidence of hypertensive disorders, such as gestational hypertension, preeclampsia, and eclampsia.</li>
@@ -70,7 +72,7 @@ const GestationalDiabetes = () => {
         </ul>
         <img src={Gestational1} alt="Gestational risk factors" style={{width:'85%'}} className='image'/>
       </section>
-      <section>
+      <section id='screening'>
         <h2>Screening</h2>
         <p>
           Screening for GDM is usually done at 24-28 weeks of gestation when insulin resistance increases. Screening criteria include:
@@ -92,7 +94,7 @@ const GestationalDiabetes = () => {
         </ol>
       </section>
 
-      <section>
+      <section id='diagnosis'>
         <h2>Diagnosis</h2>
         <p>
           Diagnostic criteria for GDM vary across guidelines. Here’s a summary:
@@ -128,7 +130,7 @@ const GestationalDiabetes = () => {
     <li>American Diabetes Association (ADA) 2-step method: 242 OB/GYNs (14.8%)</li>
   </ul>
   </section>
-  <section>
+  <section id='treatment'>
   <h2>TREATMENT</h2>
   <p>Oral Anti-Diabetic Drugs (OADs) are generally not recommended for managing gestational diabetes. Most existing guidelines exclude OADs due to concerns about safety and insufficient evidence supporting their use during pregnancy. While recent studies have suggested potential benefits from drugs like metformin and glyburide, the risks involved have led to their exclusion from routine treatment protocols.</p>
 
@@ -151,8 +153,9 @@ const GestationalDiabetes = () => {
   </section>
   <p>Post-pregnancy treatment involving diet, exercise, and/or metformin has shown to be effective in preventing the onset of type 2 diabetes. Randomized trials in non-pregnant individuals with impaired glucose tolerance have demonstrated the effectiveness of these interventions in lowering the risk of developing type 2 diabetes.</p>
 
-  <h2>CASE STUDIES</h2>
-   <section>
+ 
+   <section id='case-studies'>
+   <h2>CASE STUDIES</h2>
   <h3>STUDIES IN HIGH-INCOME COUNTRIES</h3>
   <h4>Preventing Gestational Diabetes Mellitus with Lifestyle Intervention: The Finnish Gestational Diabetes Prevention Study (RADIEL)</h4>
   <p>The Finnish Gestational Diabetes Prevention Study (RADIEL) was a multicenter randomized controlled trial conducted between 2008 and 2014 across maternity hospitals in Finland, focusing on preventing gestational diabetes mellitus (GDM) in high-risk women with a history of GDM or a prepregnancy BMI of 30 kg/m² or more.</p>
@@ -252,7 +255,7 @@ const GestationalDiabetes = () => {
         South Asian women diagnosed with GDM using the IADPSG criteria remain at a significantly high risk of dysglycemia during postpartum follow-up. Although there is ongoing debate about using these criteria for diagnosing milder glucose intolerance during pregnancy, they have been effective in predicting postpartum metabolic outcomes, at least in our context. By identifying women in the stage of intermediate hyperglycemia, these criteria may offer a valuable opportunity for early intervention and diabetes prevention. Further research focused on long-term metabolic outcomes across different regions and the cost-effectiveness of these criteria may ultimately determine their overall usefulness.
       </p>
       </section>
-      <section>
+      <section id='specialists'>
       <h2>Specialists</h2>
       <ul>
         <li>OB/GYN</li>
@@ -261,6 +264,8 @@ const GestationalDiabetes = () => {
         <li>Dietitians/Nutritionists</li>
       </ul>
       </section>
+      <SubtopicSidebar />
+      </article>
 </div>
 
     

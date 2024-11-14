@@ -1,0 +1,60 @@
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    background-color: #f4f4f4;
+    height: 100vh;
+    position: fixed;
+    top: 60px; /* Adjusted to make room for the navbar */
+    left: -250px; /* Initially hide the sidebar */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners */
+    z-index: 1000;
+    transition: left 0.3s ease; /* Smooth transition for sliding */
+  }
+  
+  .sidebar h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #3498db; /* Blue underline */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar a {
+    font-size: 1rem;
+    color: #555;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem 0;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  .sidebar a:hover {
+    background-color: #3498db; /* Hover effect color */
+    color: #fff;
+    padding-left: 1rem;
+  }
+  
+  /* Hover effect to make the sidebar slide in */
+  .sidebar:hover {
+    left: 0; /* Slide the sidebar into view */
+  }
+  
+  /* Optional: Adjust content area to provide space for the sidebar when visible */
+  .container:hover .content {
+    margin-left: 250px; /* Add space on the left when sidebar is visible */
+  }
+  

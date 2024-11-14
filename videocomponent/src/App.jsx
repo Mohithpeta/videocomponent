@@ -53,7 +53,7 @@ const AppContent = () => {
           path="/profile" 
           element={
             <ProtectedRoute isAuthenticated={isAuthenticated}>
-              
+              <GoogleLoginButton />
             </ProtectedRoute>
           } 
         />

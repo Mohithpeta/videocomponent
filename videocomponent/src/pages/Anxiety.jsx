@@ -1,9 +1,11 @@
 import Anxiety1 from './assets/Anxiety.png';
 import Anxiety2 from './assets/Anxiety(1).png';
+import SubtopicSidebar from './SubtopicSidebar';
 
 const Anxiety = () => {
   return (
-    <article className="max-w-4xl mx-auto p-6 space-y-8">
+    <div className='main'>
+    <article className="urinary-incontinence-article">
         <section>
       <header className="space-y-4">
         <h1 className="main-heading">POSTPARTUM ANXIETY</h1>
@@ -26,10 +28,13 @@ const Anxiety = () => {
         <p className="text-gray-700">
         Physiological changes during and after pregnancy, such as hormonal fluctuations, inflammatory responses, and disruptions in the hypothalamic-pituitary-adrenal (HPA) axis, are thought to contribute to postpartum anxiety. Synthetic oxytocin, commonly administered during labor, has been linked to a 1.44-times higher likelihood of postpartum anxiety development. Furthermore, the sleep disruption that often accompanies the postnatal period may significantly influence the onset of anxiety, as sleep deprivation is known to exacerbate mental health conditions.
         </p>
-        <img src={Anxiety1} alt="Anxiety symptoms" style={{width:'85%'}} className='image'/>
+       
         <p>
             <strong>These symptoms may be misinterpreted as typical postpartum experiences, leading to delays in diagnosis and treatment.</strong>
         </p>
+        </section>
+        <section id='symptoms'> <img src={Anxiety1} alt="Anxiety symptoms" style={{width:'85%'}} className='image'/></section>
+        <section id='risk-factors'>
         <div className="div">
           <h2>RISK FACTORS</h2>
           <ul>
@@ -54,10 +59,8 @@ const Anxiety = () => {
         </div>
       </section>
 
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-gray-800">SCREENING AND DIAGNOSIS</h2>
-        <p>Diagnosing perinatal anxiety is challenging due to the overlap between typical postpartum symptoms and those of anxiety disorders. Despite evidence showing that anxiety disorders are common during the postpartum period, universal assessment for anxiety has not been routinely implemented in postpartum care.</p>
-        <p><strong>The American congress of obstetricians and Gynecologists</strong>recommends screening for both anxiety and depression at least once during the perinatal period, using a standardized and validated instrument. If anxiety is detected during pregnancy, follow-up assessments should be conducted postpartum.</p>
+      <section className="space-y-4" id='screening'>
+        <h2 className="text-2xl font-semibold text-gray-800">SCREENING</h2>
         <h3>Screening Tools</h3>
         <ol>
             <li>Edinburgh Postnatal Depression Scale(EPDS):</li>
@@ -88,8 +91,13 @@ const Anxiety = () => {
             </ul>
         </ol>
       </section>
+      <section id='diagnosis'>
+        <h2>DIAGNOSIS</h2>
+      <p>Diagnosing perinatal anxiety is challenging due to the overlap between typical postpartum symptoms and those of anxiety disorders. Despite evidence showing that anxiety disorders are common during the postpartum period, universal assessment for anxiety has not been routinely implemented in postpartum care.</p>
+      <p><strong>The American congress of obstetricians and Gynecologists</strong>recommends screening for both anxiety and depression at least once during the perinatal period, using a standardized and validated instrument. If anxiety is detected during pregnancy, follow-up assessments should be conducted postpartum.</p>
+      </section>
 
-      <section className="space-y-4">
+      <section className="space-y-4" id='treatment'>
         <h2 className="heading2">TREATMENT</h2>
         <div className="div">
           <div className="div">
@@ -106,7 +114,7 @@ const Anxiety = () => {
           
         </div>
       </section>
-      <section>
+      <section id='case-studies'>
       <div className="div">
             <h2 className="heading2">CASE STUDIES</h2>
             <h3>High Income country</h3>
@@ -125,7 +133,7 @@ const Anxiety = () => {
             <p><strong>Discussion:</strong>The study found a low occurrence rate of dependent personality among nursing mothers in Enugu, despite a high prevalence of postpartum depression and anxiety. It concluded that dependent personality has minimal association with postpartum psychological distress in Igbo women. The multifactorial nature of postpartum challenges, including maternal roles and bodily changes, contributes to psychological distress. The findings emphasize the need for targeted strategies to identify at-risk mothers for early intervention, highlighting the importance of addressing postpartum mental health for the well-being of mothers, families, and child development.</p>
           </div>
       </section>
-      <section>
+      <section id='specialists'>
         <h2 className='heading2'>SPECIALISTS</h2>
         <p>
             Psychiatrists, psychologists, Pediatrician(right person for screening).
@@ -134,7 +142,10 @@ const Anxiety = () => {
             Since pediatricians have frequent contact with new mothers, they are in a good position to identify symptoms of postpartum depression and can refer mothers to appropriate mental health care if needed.
         </p>
       </section>
+      <SubtopicSidebar />
     </article>
+
+    </div>
   );
 };
 

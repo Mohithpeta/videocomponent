@@ -1,11 +1,13 @@
 
 import './PelvicOrganProlapse.css';
 import PelvicOrganProlapse from './assets/pelvic organ prolapse.png';
-import PelvicOrganProlapse1 from './assets/pelvic organ prolapse(1).png'
+import PelvicOrganProlapse1 from './assets/pelvic organ prolapse(1).png';
+import SubtopicSidebar from './SubtopicSidebar';
 
 const PelvicProlapseArticle = () => {
   return (
-    <div className="pelvic-prolapse">
+    <div className="main">
+      <article className='urinary-incontinence-article'>
       <header className="article-header">
         <h1>Pelvic Organ Prolapse</h1>
         <p className="intro-text">
@@ -26,13 +28,16 @@ const PelvicProlapseArticle = () => {
         <p>Although two-thirds of parous women exhibit anatomical evidence of pelvic organ prolapse (POP), most of them remain asymptomatic. Studies indicate that in the general population, <strong>40% of women aged between 45 and 85 years have objectively detectable POP upon examination, yet only 12% experience symptoms.</strong>
         </p>
         </div>
-        <img src={PelvicOrganProlapse} alt='Pelvic organ prolapse image' style={{width:'85%'}}/>
+        
       </section>
-      <section>
+      <section id='symptoms'>
+      <img src={PelvicOrganProlapse} alt='Pelvic organ prolapse image' style={{width:'85%'}}/>
+      </section>
+      <section id='risk-factors'>
       <h2>RISK FACTORS</h2>
       <img src={PelvicOrganProlapse1} alt='Pelvic organ prolapse image' style={{width:'85%'}} />
       </section >
-      <section className="screening-section">
+      <section className="screening-section" id='screening'>
         <h2>SCREENING</h2>
         <p>Routine screening during annual well-woman visits is essential for detecting pelvic organ prolapse (POP). Many patients may not openly discuss symptoms due to embarrassment, so focusing on urinary symptoms and the sensation of a vaginal bulge is crucial. This proactive approach helps identify those who might be reluctant to bring up their symptoms.</p>
 
@@ -46,7 +51,7 @@ const PelvicProlapseArticle = () => {
         </ul>
       </section>
 
-      <section className="diagnosis-section">
+      <section className="diagnosis-section" id='diagnosis'>
         <h2>DIAGNOSIS</h2>
         <div className="diagnosis-content">
           <h3>Physical Examination</h3>
@@ -66,7 +71,7 @@ const PelvicProlapseArticle = () => {
         </div>
       </section>
 
-      <section className="treatment-section">
+      <section className="treatment-section" id='treatment'>
         <h2>TREATMENT</h2>
         <div className="treatment-content">
             <p>Several treatment options are available for the management of pelvic organ prolapse (POP). These include both conservative and surgical approaches, with pelvic floor muscle training (PFMT) and vaginal pessaries being two primary non-surgical options.</p>
@@ -119,7 +124,7 @@ const PelvicProlapseArticle = () => {
         </div>
       </section>
 
-      <section className="resources-section">
+      <section className="resources-section" id='case-studies'>
         <h2>CASE STUDIES</h2>
         <div className="services-grid">
           <div className="service-card">
@@ -151,11 +156,13 @@ const PelvicProlapseArticle = () => {
         </div>
       </section>
       <section>
-      <div className="service-card">
+      <div className="service-card" id='specialists'>
             <h3>SPECIALISTS</h3>
             <p>Urogynecologists, Obsteticians and Gynecologists, Colorectal Surgeons, Physical Therapists(specialized in pelvic floor therapy),Urologists.</p>
           </div>
           </section>
+          <SubtopicSidebar />
+          </article>
     </div>
   );
 };

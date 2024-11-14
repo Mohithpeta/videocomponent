@@ -2,17 +2,19 @@
 import './Depression.css';
 import Depression1 from './assets/Depression.png';
 import Depression2 from './assets/Depression(1).png';
+import SubtopicSidebar from './SubtopicSidebar';
 
 const Depression = () => {
   return (
-    <div className="postpartum-depression">
+    <div className="main">
+      <article className='urinary-incontinence-article'>
       <header className="article-header">
         <h1>POSTPARTUM DEPRESSION</h1>
         <p className="intro-text">
         Postpartum depression is a common but treatable mental health disorder that often arises after childbirth, making it one of the most frequent complications of childbearing. According to the American Psychiatric Association’s, it is classified as a major depressive episode with onset during pregnancy or within four weeks following delivery. However, depression that occurs later, even up to 12 months postpartum, can still be harmful and may require treatment, even if it does not meet the full criteria for a major depressive episode.
         </p>
       </header>
-      <section>
+      <section id='symptoms'>
         <img src={Depression1} alt="Depression symptoms" style={{width:'85%'}} />
       </section>
       <section>
@@ -41,10 +43,10 @@ const Depression = () => {
         A systematic review documented 38 studies, showing varying PPD rates across different regions and settings in India found that urban areas had higher rates of PPD (24%) compared to rural areas (17%).
         </p>
       </section>
-      <section>
+      <section id='risk-factors'>
         <img src={Depression2} alt="Depression risk factors" style={{width:'85%'}} />
       </section>
-      <section>
+      <section id='screening'>
         <h2>SCREENING</h2>
         <p>
         Around 70% of new mothers experience mild depressive symptoms known as the “baby blues”, typically between 2 to 5 days after delivery. These symptoms include weepiness, irritability, and mood swings but do not impair functioning and generally resolve within two weeks. In some cases, the blues may progress to postpartum depression. Differentiating between postpartum blues and postpartum depression requires assessing mood and symptom severity at multiple time points.
@@ -68,7 +70,7 @@ const Depression = () => {
         <p><strong>PDSS:</strong>Available in long (35-item) and short (7-item) forms, purchasable from various vendors. Full version: A score of 60 or more suggests depressive symptoms, and 81 or more indicates a high likelihood of major depression. A score of six or more on the suicidal thoughts subscale requires urgent evaluation. Short version: A score of 14 or more indicates a high risk of major depression. A score of two or more on question #7 (suicidal thoughts) also necessitates immediate further evaluation.</p>
       </section>
 
-      <section>
+      <section id='diagnosis'>
         <h2>DIAGNOSIS</h2>
         <p>
         For women who screen positive for postpartum depression, the diagnosis is based on the criteria for major depressive disorder outlined in the DSM-5. This requires the presence of five out of nine symptoms for at least two weeks, with either a depressed mood or a significantly reduced interest in activities being necessary for diagnosis. Symptoms related to suicide must not be the only ones present.
@@ -105,7 +107,7 @@ const Depression = () => {
         </ul>
       </section>
 
-      <section>
+      <section id='treatment'>
         <h2>TREATMENT</h2>
         <div className="type">
             <p>Treatment options for postpartum depression vary based on the severity of a woman’s symptoms and her ability to care for her baby. Women with mild to moderate symptoms can often be managed within a primary care setting. However, if initial treatments prove ineffective, or in cases of severe illness, particularly when psychosis is involved, a referral to psychiatric care becomes essential.</p>
@@ -136,7 +138,7 @@ const Depression = () => {
         </div>
       </section>
 
-      <section>
+      <section id='case-studies'>
         <h2>CASE STUDIES</h2>
         <div className="type">
           <h3>High Income Country</h3>
@@ -167,13 +169,15 @@ const Depression = () => {
         </div>
       </section>
 
-      <section>
+      <section id='specialists'>
         <h2>SPECIALISTS</h2>
         <p>
         Psychiatrists, psychologists, Pediatrician(right person for screening).
         Since pediatricians have frequent contact with new mothers, they are in a good position to identify symptoms of postpartum depression and can refer mothers to appropriate mental health care if needed.
         </p>
       </section>
+      <SubtopicSidebar />
+      </article>
     </div>
   );
 };

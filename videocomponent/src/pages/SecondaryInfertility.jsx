@@ -1,9 +1,11 @@
+import SecondaryInfertility1 from './assets/Secondary Infertility.png';
 import './SecondaryInfertility.css';
-
+import SubtopicSidebar from './SubtopicSidebar';
 
 const SecondaryInfertility = () => {
   return (
-    <div className="infertility-info">
+    <div className="main">
+      <article className='urinary-incontinence-article'>
       <h1>SECONDARY INFERTILITY</h1>
       <section className="infertility-section">
         <p><strong>Secondary infertility refers to couples who are unable to conceive after a year of unprotected intercourse following a previous pregnancy. </strong>It affects more couples than primary infertility. Globally, 10-15% of couples are infertile, impacting over 80 million people. The emotional, physical, and financial toll of infertility is substantial, especially for women, who often face social stigmatization and displacement. Infertility is attributed equally to male and female factors in about 30% of cases, with another 25-30% involving both partners. In 10-15% of cases, the cause is unexplained.</p>
@@ -13,14 +15,17 @@ const SecondaryInfertility = () => {
           <li><strong>Permanent Secondary Infertility:</strong> This type involves more complex and long-lasting issues that hinder conception, such as advanced age, severe medical conditions, or irreversible surgical procedures.</li>
         </ul>
       </section>
+      <section>
+      <img src={SecondaryInfertility1} alt='symptoms' style={{width:'85%'}} className='image'/>
+      </section>
 
-      <section className="infertility-section">
+      <section className="infertility-section" id='symptoms'>
         <h2>SIGNS AND SYMPTOMS</h2>
         <p><strong>The primary indicator of secondary infertility is the inability to conceive after previously having one or more biological children.</strong></p>
         <p>Healthcare providers may consider it secondary infertility if someone under 35 has been trying to conceive for 12 months through regular, unprotected intercourse. For individuals over 35, they might classify it as secondary infertility after six months of trying. It can be caused by factors affecting either or both partners, though sometimes no single cause is identified. Providers often state that the reasons for secondary infertility are evenly split between both sexes and unexplained causes.</p>
       </section>
 
-      <section className="infertility-section">
+      <section className="infertility-section" id='risk-factors'>
         <h2>Risk Factors for Secondary Infertility in Women</h2>
         <ul>
          <li><strong>Issues with Egg Quantity or Quality & Primary Ovarian Insufficiency</strong></li>
@@ -47,7 +52,7 @@ const SecondaryInfertility = () => {
         </ul>
       </section>
 
-      <section className="infertility-section">
+      <section className="infertility-section" id='screening'>
         <h2>SCREENING</h2>
         <p>The doctor will inquire about the following information:</p>
         <ul>
@@ -61,7 +66,7 @@ const SecondaryInfertility = () => {
         </ul>
       </section>
 
-      <section className="infertility-section">
+      <section className="infertility-section" id='diagnosis'>
         <h2>Diagnosis</h2>
         <ul>
           <li><strong>Hormone Testing:</strong>Blood tests are conducted to evaluate hormonal levels in both partners, focusing on hormones like estrogen, progesterone, and testosterone.</li>
@@ -72,7 +77,7 @@ const SecondaryInfertility = () => {
         </ul>
       </section>
 
-      <section className="infertility-section">
+      <section className="infertility-section" id='treatment'>
         <h2>Treatment</h2>
         <ul>
             <li><strong>Fertility Medications</strong></li>
@@ -100,7 +105,7 @@ const SecondaryInfertility = () => {
         </ul>
       </section>
 
-      <section className="infertility-section">
+      <section className="infertility-section" id='case-studies'>
         <h2>CASE STUDIES</h2>
         <h3>Prevalence of Primary and Secondary Infertility</h3>
         <p><strong>Study:</strong>This analysis examined data from fifteen population surveys involving 6,400 infertile couples to assess the incidence of primary and secondary infertility. Of the couples studied, 3,600 (56.25%) presented with primary infertility, while 2,800 (43.2%) dealt with secondary infertility. The age distribution indicated that most women with primary infertility belonged to the most fertile age group, whereas those with secondary infertility were primarily in the 30–39 age range.</p>
@@ -108,10 +113,12 @@ const SecondaryInfertility = () => {
         <p><strong>Discussions:</strong>The study concluded that primary infertility is more common than secondary infertility, and rising marriage age contributes to increased rates of unexplained infertility. It emphasized the need for public awareness regarding infertility causes to dispel misconceptions and encourage timely treatment. Media outreach and educational materials targeting primary and specialized healthcare settings are recommended to enhance understanding and support for affected individuals.</p>
       </section>
 
-      <section className="infertility-section">
+      <section className="infertility-section" id='specialists'>
         <h2>SPECIALISTS</h2>
         <p>Reproductive Endocrinologists, Fertility Specialists, Obsteticians/Gynecologists(OB/GYNs).</p>
       </section>
+      <SubtopicSidebar />
+      </article>
     </div>
   );
 };

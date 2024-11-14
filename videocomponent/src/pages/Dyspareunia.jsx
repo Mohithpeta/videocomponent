@@ -1,10 +1,12 @@
 import '../pages/Dyspareuina.css';
 import Dyspareunia from './assets/Dyspareunia.png';
 import Dyspareunia1 from './assets/Dyspareunia(1).png';
+import SubtopicSidebar from './SubtopicSidebar';
 
 const DyspareuniaArticle = () => {
   return (
-    <div className="dyspareunia">
+    <div className="main">
+      <article className='urinary-incontinence-article'>
       <header className="article-header">
         <h1>DYSPAREUNIA</h1>
         <p className="intro-text">
@@ -27,7 +29,9 @@ const DyspareuniaArticle = () => {
         <p>Pain can occur before, during, or after penetrative sex — either with a partner or with yourself. The same or similar pain may be experienced while inserting things like tampons or getting a gynecological exam.</p>
         <p>Many women begin sexual activity within 3 months of delivery. One study found that postpartum sexual problems were experienced by 83% of women within the 3-month postpartum period, while the prevalence of sexual problems was 18%–30% at 6 months postpartum and 30%–52.5% after 6 months.</p>
       </section>
+      <section id='symptoms'>
       <img src={Dyspareunia} alt="dyspareunia symptoms" style={{width:'85%'}} />
+      </section>
       <section className="types">
         <h2>TYPES OF DYSPAREUNIA</h2>
         <div className="type">
@@ -66,7 +70,7 @@ const DyspareuniaArticle = () => {
         <p>Other factors like pre-existing dyspareunia, maternal fatigue, and psychosocial issues such as spousal abuse can further increase the likelihood of postpartum dyspareunia. Overall, operative procedures during childbirth are linked to a greater risk of persistent pain, highlighting the long-term impact of perineal trauma on womens sexual health.</p>
       </section>
 
-      <section className="risk-factors">
+      <section className="risk-factors" id='risk-factors'>
         <h2>RISK FACTORS</h2>
         <div className="factors-grid">
           <div className="factor">
@@ -100,8 +104,10 @@ const DyspareuniaArticle = () => {
             </ul>
         </div>
       </section>
-      <img src={Dyspareunia1} alt='Dyspareunia risk factors' style={{width:'85%'}} />
       <section>
+      <img src={Dyspareunia1} alt='Dyspareunia risk factors' style={{width:'85%'}} />
+      </section>
+      <section id='screening'>
         <h3>SCREENING</h3>
         <div>       
             <h4>Initial Assessment</h4>
@@ -133,7 +139,7 @@ const DyspareuniaArticle = () => {
             </ul>
         </div>
       </section>
-      <section className="treatmentr">
+      <section className="treatmentr" id='diagnosis'>
         <h2>DIAGNOSIS</h2>
         <ul>
             <li><strong>General Examination:</strong>The examination begins with a comprehensive gynecological history, including details on menstrual irregularities, chronic pelvic pain, dysmenorrhea, contraception history, and previous surgeries. Any drug use, auto-immune conditions, or relevant medical histories are recorded.</li>
@@ -171,7 +177,7 @@ const DyspareuniaArticle = () => {
             </li>
         </ul>
       </section>
-      <section className="treatment">
+      <section className="treatment" id='treatment'>
         <h2>TREATMENT</h2>
         <div className="treatment-options">
           <div className="option">
@@ -234,7 +240,7 @@ const DyspareuniaArticle = () => {
         </div>
       </section>
 
-      <section className="case-studies">
+      <section className="case-studies" id='case-studies'>
         <h2>CASE STUDIES</h2>
         <div className="study">
           <h3>High Income Countries</h3>
@@ -260,10 +266,12 @@ const DyspareuniaArticle = () => {
           <p><strong>Discussion:</strong>The scoping review reveals a significant <strong> lack of sexual health education for postpartum women in LMICs</strong>, where embarrassment and inadequate provider support hinder help-seeking. </p>
         </div>
       </section>
-      <section className='case studies'>
+      <section className='case studies' id='specialists'>
         <h2>SPECIALISTS</h2>
         <p>OB/GYN, Sexual Health Specialists, Pelvic Floor Physical Therapists, Urologists, Psychologists.</p>
       </section>
+      <SubtopicSidebar />
+      </article>
     </div>
   );
 };

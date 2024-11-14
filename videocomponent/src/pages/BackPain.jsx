@@ -1,10 +1,12 @@
 import BackPain1 from './assets/Back pain.png';
 import './BackPain.css';
 import BackPain2 from './assets/Back pain(1).png';
+import SubtopicSidebar from './SubtopicSidebar';
 
 const BackPain = () => {
   return (
-    <div className="back-pain">
+    <div className="main">
+      <article className='urinary-incontinence-article'>
       <header className="article-header">
         <h1>BACK PAIN</h1>
         <p className="intro-text">
@@ -24,7 +26,7 @@ const BackPain = () => {
         </div>
         <p><strong>PLBP and PGP usually start around the 18th week of pregnancy, and usually reach its peak around week 214th and 36th of pregnancy.</strong></p>
       </section>
-      <section>
+      <section id='symptoms'>
         <img src={BackPain1} alt="BackPain symptoms" style={{width:'85%'}}/>
       </section>
 
@@ -36,7 +38,7 @@ const BackPain = () => {
         </div>
       </section>
 
-      <section>
+      <section id='risk-factors'>
         <h2>RISK FACTORS</h2>
         <ul>
           <li>A history of LBP, including PGP from a previous pregnancy, and a higher BMI before or after pregnancy increase the risk of developing PGPP (PLBP postpartum as PGPP).</li>
@@ -47,7 +49,7 @@ const BackPain = () => {
       <section>
         <img src={BackPain2} alt="Backpain risk factors" style={{width:'85%'}} />
       </section>
-      <section>
+      <section id='screening'>
         <h2>SCREENING</h2>
         <p>
         Early screening for significant risk factors should be conducted, and if present, evidence-based care should be provided. Guidelines for company doctors must be followed, with effective communication being essential. While a history of LBP or PGPP may not be modifiable, early information on risks, self-management, and adjustments at home and work are effective. 
@@ -63,7 +65,7 @@ const BackPain = () => {
         </ul>
       </section>
 
-      <section>
+      <section id='diagnosis'>
         <h2>DIAGNOSIS</h2>
         <p>
         Diagnosing postpartum pelvic girdle pain (PP-PGP) involves various theoretical models to accurately assess and classify the condition. Each model provides a different perspective on understanding and managing the pain. Here’s how each model contributes to the diagnosis:
@@ -76,7 +78,7 @@ const BackPain = () => {
         </ul>
       </section>
 
-      <section>
+      <section id='treatment'>
         <h2>TREATMENT</h2>
         <ul>
             <li><strong>Osteopathic Manipulative Treatment(OMT):</strong>Osteopathic Manipulative Treatment (OMT) is a therapeutic approach that focuses on improving the function of the bodys tissues through various manual techniques. It is based on the idea that the musculoskeletal system plays a critical role in overall health. Manual therapy, particularly high-velocity thrust techniques (HVTT), offers effective short-term relief for postpartum back pain. HVTT is especially beneficial for severe cases, showing significant improvements in disability and pain scores when combined with exercises. However, its long-term benefits are less pronounced compared to stabilization exercises. rve HVTT is for cases where exercise and functional activity training fail to produce results. Pelvic belts may complement HVTT, enhancing the overall therapeutic effect.
@@ -89,7 +91,7 @@ const BackPain = () => {
         </ul>
       </section>
 
-      <section>
+      <section id='case-studies'>
         <h2>CASE STUDIES</h2>
         <div className="type">
           <h3>High-income country</h3>
@@ -131,9 +133,12 @@ const BackPain = () => {
           </p>
         </div>
       </section>
-      <section>
+      <section id='specialists'>
+        <h2>SPECIALISTS</h2>
         <p>Physiotherapists, Orthopedic Surgeons, Osteopathic Physicians, Chiropractors.</p>
       </section>
+      <SubtopicSidebar />
+      </article>
     </div>
   );
 };

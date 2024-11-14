@@ -1,9 +1,11 @@
-import UrinaryIncontinenc from './assets/Urinary Incontinence(1).png'
-import UrinaryIncontinence1 from './assets/Urinary Incontinence.png'
-import './UrinaryIncontinence.css'
+import UrinaryIncontinenc from './assets/Urinary Incontinence(1).png';
+import UrinaryIncontinence1 from './assets/Urinary Incontinence.png';
+import SubtopicSidebar from './SubtopicSidebar';
+import './UrinaryIncontinence.css';
 
 const UrinaryIncontinence = () => {
   return (
+    <div className='main'>
     <article className="urinary-incontinence-article">
       <section>
       <h1>Urinary Incontinence</h1>
@@ -30,7 +32,7 @@ const UrinaryIncontinence = () => {
       </ul>
       </section>
       
-        <section>
+        <section id='symptoms'>
       <h2>Symptoms</h2>
       <ul>
         <li>Leakage while laughing, sneezing, or coughing</li>
@@ -38,17 +40,18 @@ const UrinaryIncontinence = () => {
       </ul>
        <img src={UrinaryIncontinence1} alt="ui" style={{ width:'85%'}} />
        </section>
-       <section>
+       <section id='risk-factors'>
        <h3>Risk Factors for Postpartum SUI</h3>
       <p>Risk factors include vaginal delivery, advanced age at gestation, high BMI, excess weight gain, diabetes, episiotomy, forceps delivery, and more. Protective factors include elective cesarean section and vacuum extraction.</p>
        <img src={UrinaryIncontinenc} alt="hhh" style={{width:'85%'}}></img>
        </section>
-       <section>
+       <section id='screening'>
       <h2>Screening</h2>
       <p>
         Screening typically involves a series of questions by physicians. A validated tool called The QUID is available to diagnose the type of urinary incontinence and assess symptom frequency, making it a valuable resource for clinicians and researchers alike.
       </p>
-
+      </section>
+      <section id='diagnosis'>
       <h2>Diagnosis</h2>
       <p>
         Diagnosis includes individualized clinical evaluations and may be followed by tests such as the cough stress test, pad test, postvoid residual volume measurement, and urodynamic testing.
@@ -105,7 +108,7 @@ const UrinaryIncontinence = () => {
         These tests capture images and videos of the bladder using x-rays or ultrasound, with contrast dye for better visualization.
       </p>
       </section>
-      <section>
+      <section id='treatment'>
       <div>
       <h2>Treatment</h2>
       <p>For most patients with uncomplicated stress urinary incontinence (SUI), initial management typically includes a range of noninvasive interventions such as behavioral modification, pelvic floor exercises (PFEs) with or without biofeedback, and various supplementary teaching aids.</p>
@@ -176,7 +179,7 @@ const UrinaryIncontinence = () => {
 </div>
 </section>
 <div>
-  <section>
+  <section id='case-studies'>
       <h2>Case Studies</h2>
 
       <h3>Study in High-Income Countries</h3>
@@ -216,13 +219,14 @@ const UrinaryIncontinence = () => {
       <p><strong>Outcome:</strong>The study found that tailored, supervised PFMT could be a feasible intervention in antenatal care for Nepalese women. However, adherence was influenced by factors such as time constraints and cultural considerations. Despite these challenges, the high level of motivation reported by the participants suggests that PFMT holds promise as a preventive measure for POP and other pelvic floor issues.</p>
       <p><strong>Discussion:</strong>The study highlights the feasibility of implementing PFMT in antenatal care in Nepal, with adaptations to suit local lifestyles. Although challenges like time constraints and cultural factors affected adherence, the motivation of the participants, particularly regarding the prevention of pelvic organ prolapse, indicates that PFMT could be a valuable component of antenatal care. Further exploration of strategies to overcome logistical barriers may enhance adherence and effectiveness.</p>
       </section>
-      <section>
+      <section id='specialists'>
       <h2>SPECIALISTS:</h2>
         <p>Urologist, urogynaecologist, OB/GYN, Physiotherapist with pelvic health specialization.</p>
       </section>
     </div>
     </article>
-    
+    <SubtopicSidebar />
+    </div>
   );
 };
 

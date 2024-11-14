@@ -27,7 +27,7 @@
   }
   
   .back-pain img {
-    display: block;
+    display: inline-block;
     margin: 2rem auto;
     width: 85%;
   }
