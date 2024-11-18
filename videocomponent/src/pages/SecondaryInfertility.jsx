@@ -1,6 +1,13 @@
 import SecondaryInfertility1 from './assets/Secondary Infertility.png';
 import './SecondaryInfertility.css';
 import SubtopicSidebar from './SubtopicSidebar';
+import SecondaryInfertility8 from './assets/pics/SECONDARY INFERTILITY.png';
+import SecondaryInfertility2 from './assets/pics/SEC INFERTILITY(1).png';
+import SecondaryInfertility3 from './assets/pics/SEC INFERTILITY(2).png';
+import SecondaryInfertility4 from './assets/pics/SEC INFERTILITY(3).png';
+import SecondaryInfertility5 from './assets/pics/SEC INFERTILITY(4).png';
+import SecondaryInfertility6 from './assets/pics/SEC INFERTILITY(5).png';
+import SecondaryInfertility7 from './assets/pics/SEC INFERTILITY(6).png';
 
 const SecondaryInfertility = () => {
   return (
@@ -31,14 +38,18 @@ const SecondaryInfertility = () => {
          <li><strong>Issues with Egg Quantity or Quality & Primary Ovarian Insufficiency</strong></li>
          <p>It has been noted that individuals assigned female at birth are born with a limited supply of eggs, and as they approach their 40s, the number of eggs decreases. Those remaining are more prone to chromosomal abnormalities. Autoimmune or genetic conditions, as well as previous surgeries or radiation, have been cited as factors that may result in a lower count of viable eggs.</p>
          <p>Primary ovarian insufficiency (POI) occurs when an individual experiences irregular menstrual cycles before turning 40. While approximately 5–10% of those with POI are able to conceive and have normal pregnancies, many individuals with this condition face challenges in becoming pregnant. The exact cause of POI is often unknown, but it may result from factors such as chemotherapy, radiation treatment to the pelvic area, or other medical conditions.</p>
+         <img src={SecondaryInfertility8} alt="img" className='image' style={{width:'85%'}} />
          <li><strong>Fallopian Tube Obstruction</strong></li>
          <p>According to a 2013 study, fallopian tube obstruction is found in 29% of females experiencing secondary infertility. Infections, particularly those caused by chlamydia, can lead to damage in the fallopian tubes, resulting in permanent blockages.</p>
-         <li><strong>Polycystic Ovary Syndrome(PCOS)</strong></li>
+         <img src={SecondaryInfertility2} alt="img" className='image' style={{width:'85%'}} />         <li><strong>Polycystic Ovary Syndrome(PCOS)</strong></li>
          <p>PCOS has been described as a hormonal condition characterized by irregular or infrequent menstrual cycles, affecting ovulation and reducing the chances of conception.</p>
+         <img src={SecondaryInfertility3} alt="img" className='image' style={{width:'85%'}} />
          <li><strong>Endometriosis</strong></li>
          <p>Endometriosis, a condition where uterine-like tissue grows outside the uterus, has been acknowledged as a cause of infertility in some cases, though not all individuals with endometriosis experience infertility.</p>
+         <img src={SecondaryInfertility4} alt="img" className='image' style={{width:'85%'}} />
          <li><strong>Weight gain and Lifestyle factors</strong></li>
          <p>Weight gain has been reported to lead to ovarian dysfunction in some individuals. It is also noted that infertility may be linked to medications or treatments for certain conditions. Additionally, lifestyle factors such as smoking or alcohol consumption are believed to negatively affect ovulation and conception.</p>
+         <img src={SecondaryInfertility5} alt="img" className='image' style={{width:'85%'}} />
          <li><strong>Hormonal Disorders</strong></li>
          <p>Hormonal disorders arise when there is a malfunction in the hypothalamus and pituitary glands in the brain, which produce hormones crucial for ovarian function. Issues with these glands can disrupt the reproductive system, potentially preventing ovulation.</p>
          <li><strong>Uterine Conditions</strong></li>
@@ -49,6 +60,7 @@ const SecondaryInfertility = () => {
             <li>Adenomyosis, where the uterine lining grows into the uterine wall</li>
             Congenital anomalies present at birth that result in an atypical uterine structure
          </ul>
+         <img src={SecondaryInfertility6} alt="img" className='image' style={{width:'85%'}} />
         </ul>
       </section>
 
@@ -84,6 +96,7 @@ const SecondaryInfertility = () => {
             <p>The primary treatment for women with ovulation issues typically involves clomiphene (Clomid) and injections of follicle-stimulating hormone (FSH) and luteinizing hormone (LH). Clomid promotes ovulation, while the injections help mature eggs and trigger ovulation.</p>
             <li><strong>Surgery</strong></li>
             <p>For women, surgical options may include the removal of fibroids, endometrial growths, scarring, or uterine polyps. Surgery might also be considered to unblock a fallopian tube. </p>
+            <img src={SecondaryInfertility7} alt="img" className='image' style={{width:'85%'}} />
             <li><strong>Assisted Reproductive Technology(ART)</strong></li>
             <p>If other treatments fail, individuals may explore assisted reproductive technology to conceive. Some ART methods include:</p>
             <ul>

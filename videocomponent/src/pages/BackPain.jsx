@@ -2,6 +2,12 @@ import BackPain1 from './assets/Back pain.png';
 import './BackPain.css';
 import BackPain2 from './assets/Back pain(1).png';
 import SubtopicSidebar from './SubtopicSidebar';
+import BackPain3 from './assets/pics/BACK PAIN.png';
+import BackPain4 from './assets/pics/BACK PAIN(1).png';
+import BackPain5 from './assets/pics/BACK PAIN(2).png';
+import BackPain6 from './assets/pics/BACK PAIN(3).png';
+import BackPain7 from './assets/pics/BACK PAIN(4).png';
+import BackPain8 from './assets/pics/BACK PAIN(5).png';
 
 const BackPain = () => {
   return (
@@ -70,10 +76,14 @@ const BackPain = () => {
         <p>
         Diagnosing postpartum pelvic girdle pain (PP-PGP) involves various theoretical models to accurately assess and classify the condition. Each model provides a different perspective on understanding and managing the pain. Here’s how each model contributes to the diagnosis:
         </p>
+        <img src={BackPain3} alt="img" className='image' style={{width:'85%'}} />
         <ul>
             <li><strong>Kinematic and Structural Analysis:</strong>Understanding pelvic kinematics is essential for diagnosing PP-PGP. This involves evaluating the shape and function of the sacrum, ilium, and pubic symphysis, as well as the surrounding connective tissues and muscles. Provocative testing helps identify which joints are involved and their specific roles in joint stability during movement. Accurate kinematic assessment informs the identification of pain sources and functional impairments.</li>
+            <img src={BackPain4} alt="img" className='image' style={{width:'85%'}} />
             <li><strong>Treatment-Based:</strong>The treatment-based classification model focuses on alignment and the need for manipulative techniques. Although this model emphasizes biomechanical alignment, evidence suggests limited reliability in identifying alignment issues in nonpregnant populations. Therefore, this approach should be combined with other diagnostic methods to determine effective treatment strategies.</li>
+            <img src={BackPain5} alt="img" className='image' style={{width:'85%'}} />
             <li><strong>Hybrid Diagnostic Model:</strong>A hybrid diagnostic model integrates aspects from multiple classification models, including biomechanical factors, alignment, and movement testing. This model provides a comprehensive approach to diagnosing PP-PGP by evaluating load transfer impairments, movement patterns, and muscle performance. It helps in developing a personalized care plan that addresses specific impairments and improves pelvic girdle stability.</li>
+            
             <li><strong>Movement and Functional Testing:</strong>Movement testing assesses trunk and hip movements to identify specific patterns of dysfunction and coexisting impairments. This testing is crucial for understanding how movement affects pelvic stability and for developing targeted interventions. Evaluation of muscle performance during various activities helps in diagnosing the extent of functional limitations and guiding appropriate treatment strategies.</li>
         </ul>
       </section>
@@ -83,18 +93,21 @@ const BackPain = () => {
         <ul>
             <li><strong>Osteopathic Manipulative Treatment(OMT):</strong>Osteopathic Manipulative Treatment (OMT) is a therapeutic approach that focuses on improving the function of the bodys tissues through various manual techniques. It is based on the idea that the musculoskeletal system plays a critical role in overall health. Manual therapy, particularly high-velocity thrust techniques (HVTT), offers effective short-term relief for postpartum back pain. HVTT is especially beneficial for severe cases, showing significant improvements in disability and pain scores when combined with exercises. However, its long-term benefits are less pronounced compared to stabilization exercises. rve HVTT is for cases where exercise and functional activity training fail to produce results. Pelvic belts may complement HVTT, enhancing the overall therapeutic effect.
             </li>
+            <img src={BackPain6} alt="img" className='image' style={{width:'85%'}} />
             <li><strong>Exercise Interventions:</strong>Postpartum exercise interventions focus on strengthening core and pelvic floor muscles to reduce pain and disability. Stabilization exercises targeting transversus abdominis and pelvic floor muscles are particularly effective for improving muscle function. These exercises are typically combined with other therapies, starting 6-12 weeks postpartum. Long-term outcomes consistently favor exercise over manual therapy. Incorporating pelvic belts during exercise enhances stability and function by reducing joint laxity.
             </li>
+            <img src={BackPain7} alt="img" className='image' style={{width:'85%'}} />
             <li><strong>Pelvic Belts:</strong>Pelvic belts are an adjunct to postpartum exercise, providing support by stabilizing the sacroiliac joint (SIJ). When worn high, they offer superior reduction in joint laxity. Pelvic belts are particularly effective for individuals with significant pain, improving pain management during activities. However, their role in cases with milder symptoms remains unclear, warranting further research. Their integration into rehabilitation protocols supports better functional outcomes.</li>
+            <img src={BackPain8} alt="img" className='image' style={{width:'85%'}} />
             <li><strong>Chiropractic Adjustment:</strong>A chiropractic adjustment is a therapeutic treatment where a licensed chiropractor uses their hands or special instruments to manipulate joints in body. This treatment is also called spinal manipulation or joint manipulation. A chiropractic adjustment can help reduce pain, correct your body’s alignment and how your body functions physically. 
             </li>
+            
         </ul>
       </section>
 
       <section id='case-studies'>
         <h2>CASE STUDIES</h2>
         <div className="type">
-          <h3>High-income country</h3>
           <p>
             <strong>Osteopathic Manipulative Therapy in women with Postpartum Low Back Pain and Disability: A Pragmatic Randomized Controlled Trial</strong>
           </p>
@@ -103,7 +116,6 @@ const BackPain = () => {
           <p><strong>Discussion:</strong>Results indicate that OMTh led to significant improvements in both pain and disability, suggesting it may be an effective intervention for women experiencing postpartum-related pain. The study highlighted that postpartum PGP remains poorly understood and could benefit from more targeted therapies and evaluation methods.</p>
         </div>
         <div className="type">
-          <h3>Mid-income country</h3>
           <p>
             Does regular exercise during pregnancy influence lumbopelvic pain? A randomized controlled trial
           </p>
@@ -118,7 +130,6 @@ const BackPain = () => {
           </p>
         </div>
         <div className="type">
-          <h3>Low-income country</h3>
           <p>
           Persistence of low back/pelvic girdle pains in women after pregnancy: An experience from Aminu Kano Teaching Hospital, Nigeria
           </p>

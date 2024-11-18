@@ -3,6 +3,7 @@ import './GestationalDiabetes.css';
 import Gestational from './assets/Gestational Diabetes.png';
 import Gestational1 from './assets/Gestational Diabetes(1).png';
 import SubtopicSidebar from './SubtopicSidebar';
+import Gestational2 from './assets/pics/GESTATIONAL DIABETES.png';
 
 const GestationalDiabetes = () => {
   return (
@@ -106,6 +107,9 @@ const GestationalDiabetes = () => {
           <li><strong>IADPSG:</strong> One elevated value suffices, with specific thresholds for fasting, 1-hour, and 2-hour PG.</li>
           <li><strong>DIPSI:</strong> One-step 2-hour PG ≥140 mg/dl following a 75-g OGTT.</li>
         </ul>
+        
+          <img src={Gestational2} alt="image" className='image' style={{width:'85%'}} />
+        
       </section>
       <p>One key consideration is that the Indian population is diverse and varies significantly, making it difficult to conclusively apply international criteria to Indian patients.</p>
   <section>
@@ -156,7 +160,6 @@ const GestationalDiabetes = () => {
  
    <section id='case-studies'>
    <h2>CASE STUDIES</h2>
-  <h3>STUDIES IN HIGH-INCOME COUNTRIES</h3>
   <h4>Preventing Gestational Diabetes Mellitus with Lifestyle Intervention: The Finnish Gestational Diabetes Prevention Study (RADIEL)</h4>
   <p>The Finnish Gestational Diabetes Prevention Study (RADIEL) was a multicenter randomized controlled trial conducted between 2008 and 2014 across maternity hospitals in Finland, focusing on preventing gestational diabetes mellitus (GDM) in high-risk women with a history of GDM or a prepregnancy BMI of 30 kg/m² or more.</p>
   <p>The intervention group received personalized lifestyle counseling throughout pregnancy, including dietary advice and physical activity recommendations, while the control group received standard care. The results showed that the intervention group experienced a significant reduction in GDM incidence compared to the control group, with those adhering to lifestyle changes also showing improved weight management, better glucose regulation, reduced adverse delivery outcomes, and enhanced neonatal health.</p>
@@ -164,7 +167,7 @@ const GestationalDiabetes = () => {
   <h4>Lifestyle intervention can reduce the risk of gestational diabetes: a meta-analysis of randomized controlled trial</h4>
   <p>Data from 11,487 pregnant women participating in 29 randomized controlled trials (RCTs) were analyzed to evaluate the impact of lifestyle modification on the risk of gestational diabetes mellitus (GDM). An 18% reduction in the risk of GDM was demonstrated due to lifestyle modifications, with a significant impact observed when interventions were started before the 15th gestational week.</p>
 
-  <h3>STUDIES IN MID-INCOME COUNTRIES</h3>
+
   <h4>Determinants of Gestational Diabetes Mellitus: A Hospital-Based Case–Control Study in Coastal South India</h4>
   <p>This case–control study identified several independent risk factors for GDM, including irregular menstrual cycles, a history of GDM in previous pregnancies, and a family history of type 2 diabetes mellitus or GDM. The findings align with several other studies that highlight these critical risk factors and underscore the importance of identifying high-risk individuals for early intervention to mitigate the risk of GDM.</p>
 
@@ -174,7 +177,6 @@ const GestationalDiabetes = () => {
   <h4>Physical activity patterns and gestational diabetes outcomes – The wings project</h4>
   <p>The WINGS Model of Care effectively enhanced physical activity and glycemic control among women with GDM, demonstrating the potential of personalized counseling and continuous support throughout pregnancy. The improvements in fasting glucose and postprandial glucose levels indicated that the intervention successfully addressed key challenges faced by women with GDM.</p>
 
-  <h3>STUDY IN LOW-INCOME COUNTRY</h3>
   <h4>A snapshot of current gestational diabetes management practices from 26 low-income and lower-middle-income countries</h4>
   <p>This survey revealed high variability in GDM management practices and highlighted concerns about the adequacy of current approaches, especially in settings with limited resources. The study emphasized the need for updates to GDM management practices in line with the latest FIGO guidelines and the importance of establishing uniform guidelines and improving access to primary- and secondary-level care to enhance GDM management and reduce the burden of the condition in low-income and lower-middle-income countries.</p>
 

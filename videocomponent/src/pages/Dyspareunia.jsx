@@ -2,6 +2,11 @@ import '../pages/Dyspareuina.css';
 import Dyspareunia from './assets/Dyspareunia.png';
 import Dyspareunia1 from './assets/Dyspareunia(1).png';
 import SubtopicSidebar from './SubtopicSidebar';
+import Dyspareunia6 from './assets/pics/DYSPAREUNIA.png';
+import Dyspareunia2 from './assets/pics/DYSPAREUNIA(1).png';
+import Dyspareunia3 from './assets/pics/DYSPAREUNIA(2).png';
+import Dyspareunia4 from './assets/pics/DYSPAREUNIA(3).png';
+import Dyspareunia5 from './assets/pics/DYSPAREUNIA(4).png';
 
 const DyspareuniaArticle = () => {
   return (
@@ -30,7 +35,7 @@ const DyspareuniaArticle = () => {
         <p>Many women begin sexual activity within 3 months of delivery. One study found that postpartum sexual problems were experienced by 83% of women within the 3-month postpartum period, while the prevalence of sexual problems was 18%–30% at 6 months postpartum and 30%–52.5% after 6 months.</p>
       </section>
       <section id='symptoms'>
-      <img src={Dyspareunia} alt="dyspareunia symptoms" style={{width:'85%'}} />
+      <img src={Dyspareunia} alt="dyspareunia symptoms" style={{width:'85%'}} className='image'/>
       </section>
       <section className="types">
         <h2>TYPES OF DYSPAREUNIA</h2>
@@ -147,8 +152,17 @@ const DyspareuniaArticle = () => {
             <li><strong>Vulva/Vaginal Examination:</strong>
             <ul>
                 <li><strong>Inspection:</strong>A detailed inspection of the vulva is performed to assess for normal anatomy, atrophy, dermatoses, infections, trauma, and abnormalities such as episiotomies or hymenal ring issues.</li>
+                <section>
+                  <img src={Dyspareunia6} alt="image" className='image' style={{width:'85%'}}/>
+                </section>
                 <li><strong>Pressure-Point Testing:</strong> Using a cotton-tipped applicator, areas of tenderness are identified to differentiate between generalized vulvodynia and vestibulodynia.</li>
+                <section>
+                  <img src={Dyspareunia2} alt="image" className='image' style={{width:'85%'}} />
+                </section>
                 <li><strong>Palpation:</strong> Gentle palpation of the introitus, pelvic muscles, and relevant areas is conducted to detect issues such as suture knots, granulomata, or pelvic floor dysfunction.</li>
+                <section>
+                  <img src={Dyspareunia3} alt="image" className='image' style={{width:'85%'}} />
+                </section>
             </ul>
             </li>
             <li><strong>Superficial Dyspareunia:</strong>
@@ -169,6 +183,7 @@ const DyspareuniaArticle = () => {
               <ul>
                 <li><strong>Vulval and Vaginal Swabs:</strong>Microbiological cultures are performed to rule out infections.</li>
                 <li><strong>Pelvic Ultrasound:</strong> This is used to detect pelvic abnormalities, although it may not always be necessary unless specific conditions are suspected.</li>
+                <img src={Dyspareunia4} alt="image" className='image' style={{width:'85%'}} />
                 <li><strong>Laparoscopy:</strong>This procedure is considered for diagnosing endometriosis or other organic pelvic pathology, with risks and potential outcomes communicated to the patient.</li>
                 <li><strong>Hormone Testing:</strong>Serum levels of estradiol, testosterone, SHBG, and prolactin are evaluated if hormonal abnormalities are suspected.</li>
                 <li><strong>Vulvoscopy and Biopsy:</strong>These may be employed to detect subtle abnormalities or neoplastic conditions, with biopsy indicated if inflammatory causes are suspected.</li>
@@ -223,6 +238,7 @@ const DyspareuniaArticle = () => {
             <p>Vaginal dilators, made from medical-grade silicone or plastic, are tube-shaped devices used to relieve pelvic pain, relax vaginal tightness, and restore sexual pleasure by gradually training the body and mind for pain-free penetration.</p>
             <p>These dilators come in ascending sizes, ranging from that of a small finger to an erect penis, allowing the vaginal muscles to be gently stretched over time. Typically, patients with dyspareunia begin with the smallest size, inserting the dilator and relaxing for 10-15 minutes a few times a week until it becomes comfortable. Progression through larger sizes continues until comfort is achieved with a dilator the size of an average penis.
             </p>
+            <img src={Dyspareunia5} alt="image" className='image' style={{width:'85%'}} />
           </div>
           <div className='option' >
             <h3>Psychotherapy and Counselling:</h3>
@@ -243,7 +259,6 @@ const DyspareuniaArticle = () => {
       <section className="case-studies" id='case-studies'>
         <h2>CASE STUDIES</h2>
         <div className="study">
-          <h3>High Income Countries</h3>
           <p><strong>Postpartum dyspareunia and sexual functioning: a  prospective cohort study</strong></p>
           <p><strong>Study:</strong> The intervention began with the recruitment of pregnant women during their third trimester, between 26 and 36 weeks of gestation. At their prenatal consultation, the research procedure was explained to them, and an invitation package was provided. This package contained an information sheet detailing the study, an informed consent form for participation, and baseline questionnaires. These questionnaires included one on general patient characteristics (age, weight, height, ethnicity, frequency of intercourse, use of contraception, parity, medical and surgical history), a non-validated self-assessment questionnaire on dyspareunia, the validated Female Sexual Function Index (FSFI), and the validated Short Form-36 (SF-36) health survey for measuring quality of life. Participants were required to complete and return these materials before delivery.</p>
           <p>Six weeks postpartum, participants were given follow-up questionnaires to assess any changes, including sexual function and quality of life. At six months postpartum, follow-up questionnaires were sent by regular post, and participants were encouraged to return them using prepaid envelopes provided by the researchers. Data on delivery and breastfeeding practices were also collected from the patients medical records and follow-up questionnaires.</p>
@@ -251,7 +266,6 @@ const DyspareuniaArticle = () => {
           <p><strong>Discussion:</strong> Most women typically resume sexual activity within six weeks after childbirth. This study highlighted that primiparous women, regardless of when they restart intercourse, have limited knowledge about the impact of instrumental delivery, the importance of lubrication for pain-free intercourse, and how breastfeeding might influence lubrication production. During the first postpartum week, women are still recovering from pregnancy and delivery, with sexual issues commonly reported. Although sexual function improves between six weeks and six months, the findings suggest that the presence and severity of sexual dysfunction at six weeks postpartum can have lasting effects on an individuals sexual life.</p>
         </div>
         <div className="study">
-          <h3>Mid-Income Countries</h3>
           <p><strong>Risk of non‑resumption of vaginal sex and dyspareunia among cesarean‑delivered women</strong></p>
           <p><strong>Study:</strong> This study focused on women who delivered by cesarean section in selected hospitals across Pune District between 2017 and 2018. All women residing in the Pune district and meeting the language requirements (English, Marathi, or Hindi) were eligible, while those with psychiatric conditions were excluded. The comparison group consisted of age and parity-matched women who had vaginal deliveries in the same hospitals during the enrollment period, using identical inclusion and exclusion criteria. The study primarily analyzed the resumption of vaginal sex postpartum and the occurrence of dyspareunia, utilizing a sample size of 3,112 women, with 1,556 women in each group. Data were gathered using pre-tested interview schedules and analyzed using the Chi-square test in SPSS Version 25.0.</p>
           <p><strong>Outcome:</strong>The results indicated that by 6 weeks postpartum, 44.95% of women had resumed vaginal sex, with a higher proportion of early resumption observed among rural women (44.77%) compared to urban women (38.91%). No significant association was found between sociodemographic factors and early resumption, except for the rural-urban divide. At 6 months, the proportion of women who had not resumed vaginal sex was minimal (3.11%). The risk of non-resumption was higher among cesarean-delivered women at 6 weeks but not at 6 months. Dyspareunia was more prevalent among vaginally delivered women, with a 50% rate at 6 weeks. The risk ratio of dyspareunia was significantly lower in cesarean-delivered women compared to vaginally-delivered women.</p>
@@ -259,7 +273,6 @@ const DyspareuniaArticle = () => {
 
         </div>
         <div className="study">
-          <h3>Low-Income Countries</h3>
           <p><strong>A scoping review on women’s sexual health in the postpartum period: opportunities for research and practice within low-and middle-income countries</strong></p>
           <p><strong>Study:</strong> A scoping review was conducted to summarize and identify research from low and middle-income countries (LMICs) on women’s sexual health during the postpartum period. tudies were included if they were peer-reviewed, published in English between 2001 and 2021, and focused on sexual health within the postpartum period, defined as one year after delivery. The final review emphasized sexual function (e.g., pleasure, arousal, intimacy) and sexual dysfunction (e.g., dyspareunia, sexual violence), excluding studies related to contraception or family planning.</p>
           <p><strong>Outcomes:</strong>The findings revealed a significant gap in sexual health education for postpartum women in LMICs, where <strong>many felt embarrassed to seek help and perceived providers as inadequately prepared to handle sexual health issues.</strong> Cultural pressures often influenced womens decisions about resuming sexual activity, highlighting the need for better integration of sexual health education into postnatal care services. The discussion underscores the importance of including sexual health education in postnatal care to address both positive and negative sexual health outcomes. Normalizing sexual health concerns during the postpartum period can help reduce stigma and encourage women to seek appropriate care. Additionally, improving the quality of maternal health services should involve including sexual health counseling and focusing on postnatal care quality, not just antenatal services.</p>

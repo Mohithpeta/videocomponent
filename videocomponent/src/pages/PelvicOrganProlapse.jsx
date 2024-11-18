@@ -3,6 +3,21 @@ import './PelvicOrganProlapse.css';
 import PelvicOrganProlapse from './assets/pelvic organ prolapse.png';
 import PelvicOrganProlapse1 from './assets/pelvic organ prolapse(1).png';
 import SubtopicSidebar from './SubtopicSidebar';
+import PelvicOrganprolapse6 from './assets/pics/PELVIC ORGAN PROLAPSE.png';
+
+import PelvicOrganprolapse2 from './assets/pics/PELVIC ORGAN PROLAPSE(1).png';
+import PelvicOrganprolapse3 from './assets/pics/PELVIC ORGAN PROLAPSE(2).png';
+import PelvicOrganprolapse4 from './assets/pics/PELVIC ORGAN PROLAPSE(3).png';
+import PelvicOrganprolapse5 from './assets/pics/PELVIC ORGAN PROLAPSE(4).png';
+
+import PelvicOrganprolapse7 from './assets/pics/POP(5).png';
+import PelvicOrganprolapse8 from './assets/pics/POP(6).png';
+import PelvicOrganprolapse9 from './assets/pics/POP(7).png';
+import PelvicOrganprolapse10 from './assets/pics/POP(8).png';
+import PelvicOrganprolapse11 from './assets/pics/POP(9).png';
+import PelvicOrganprolapse12 from './assets/pics/POP(10).png';
+
+
 
 const PelvicProlapseArticle = () => {
   return (
@@ -28,14 +43,15 @@ const PelvicProlapseArticle = () => {
         <p>Although two-thirds of parous women exhibit anatomical evidence of pelvic organ prolapse (POP), most of them remain asymptomatic. Studies indicate that in the general population, <strong>40% of women aged between 45 and 85 years have objectively detectable POP upon examination, yet only 12% experience symptoms.</strong>
         </p>
         </div>
+        <img src={PelvicOrganprolapse6} alt="image" className='image' style={{width:'85%'}} />
         
       </section>
       <section id='symptoms'>
-      <img src={PelvicOrganProlapse} alt='Pelvic organ prolapse image' style={{width:'85%'}}/>
+      <img src={PelvicOrganProlapse} alt='Pelvic organ prolapse image' style={{width:'85%'}} className='image'/>
       </section>
       <section id='risk-factors'>
       <h2>RISK FACTORS</h2>
-      <img src={PelvicOrganProlapse1} alt='Pelvic organ prolapse image' style={{width:'85%'}} />
+      <img src={PelvicOrganProlapse1} alt='Pelvic organ prolapse image' style={{width:'85%'}} className='image' />
       </section >
       <section className="screening-section" id='screening'>
         <h2>SCREENING</h2>
@@ -56,6 +72,7 @@ const PelvicProlapseArticle = () => {
         <div className="diagnosis-content">
           <h3>Physical Examination</h3>
           <p>A comprehensive physical examination is crucial for diagnosing and classifying pelvic organ prolapse (POP). Initially, an abdominal and pelvic examination should be conducted to exclude pelvic masses. The external genitalia and vaginal epithelium need to be inspected for atrophy, irritation, or ulceration. A detailed assessment of the prolapse is performed using a split speculum while the patient performs a Valsalva maneuver or coughs. This examination helps to reveal the perineal body and vaginal opening, and the anterior and posterior vaginal walls are inspected for cystocele and rectocele using a 1-blade Sims speculum. Additionally, pelvic floor muscle tone should be assessed, noting the strength of contractions. The extent of prolapse is quantified using either the Baden-Walker grading system or the Pelvic Organ Prolapse Quantification (POP-Q) system to provide a structured clinical assessment.</p>
+          <img src={PelvicOrganprolapse2} alt="img" className='image' style={{width:'85%'}} />
           <ul>
             <li><strong>Pelvic Organ Prolapse Quantification(POP -Q)Examination:</strong></li>
             <li>
@@ -66,7 +83,9 @@ const PelvicProlapseArticle = () => {
                 </ul>
             </li>
             <li><strong>Urodynamic Testing:</strong> A urodynamic evaluation is recommended for patients with significant voiding symptoms to assess bladder and sphincteric function. This test helps identify detrusor dysfunction and high post-void residual, which are common in severe prolapse. Reducing the prolapse during the evaluation can unmask stress urinary incontinence and improve the assessment of sphincteric function.</li>
+            <img src={PelvicOrganprolapse3} alt="img" className='image' style={{width:'85%'}} />
             <li><strong>Imaging:</strong>In cases of severe procidentia, imaging such as a computed tomography (CT) urogram is indicated. This helps evaluate potential distortion of the pelvic anatomy, particularly the ureters, which might be affected by the descent of the bladder, leading to obstruction and hydronephrosis.</li>
+            <img src={PelvicOrganprolapse4} alt="img" className='image' style={{width:'85%'}} />
           </ul>
         </div>
       </section>
@@ -89,29 +108,34 @@ const PelvicProlapseArticle = () => {
             <li>stopping smoking</li>
             <li>decreasing pushing/straining for bowel movements</li>
             <li>decreasing weight</li>
+            <img src={PelvicOrganprolapse5} alt="img" className='image' style={{width:'85%'}} />
           </ul></li>
           <li>
           <h3>Midurethral Sling(MUS)</h3>
           <p>The midurethral sling (MUS) is a widely used, minimally invasive surgical procedure for treating stress urinary incontinence (SUI) that can accompany POP. The procedure involves the placement of a synthetic mesh to provide support to the urethra. MUS has symptom cure rates ranging from 75% to 94%, with objective cure rates from 57% to 92%.</p></li>
+          <img src={PelvicOrganprolapse7} alt="image" className='image' style={{width:'85%'}} />
           <li>
             <h3>Burch Urethropexy</h3>
             <p>The Burch retropubic urethropexy is an older surgical procedure involving the fixation of the urethra to Cooper’s ligament via an abdominal approach. It was once the gold standard before MUS gained popularity.
             Studies show it remains effective in the long term, especially when compared to traditional autologous pubovaginal slings (PVS).</p>
           </li>
+          <img src={PelvicOrganprolapse8} alt="img" className='image' style={{width:'85%'}} />
           <li>
             <h3>Autologous Pubovaginal Sling(PVS)</h3>
             <p>The autologous pubovaginal sling (PVS) is a more invasive option for SUI treatment, where a sling is created using the patient’s own tissue. It is typically reserved for patients with recurrent or severe SUI, particularly those with fixed urethra or complications from previous surgeries.</p>
             <p>The key advantage of PVS is the absence of synthetic materials, eliminating the risk of mesh-related complications. However, it comes with a higher surgical burden, including longer operative times, greater blood loss, and postoperative complications like voiding dysfunction.</p>
-
+             <img src={PelvicOrganprolapse9} alt="img" className='image' style={{width:'85%'}} />
           </li>
           <li>
             <h3>Urethral Bulking</h3>
             <p>For women who cannot or do not wish to undergo surgery, urethral bulking involves injecting agents such as silicone particles to provide support for the urethra.</p>
           </li>
+          <img src={PelvicOrganprolapse10} alt="img"  className='image' style={{width:'85%'}}/>
           <li>
             <h3>Artificial Urethral Sphincter(AUS)</h3>
             <p>The AUS may be considered for women with severe intrinsic sphincter deficiency (ISD). However, due to the high risk of complications like vaginal erosion, it is not commonly recommended as a first-line treatment for SUI in female patients.</p>
           </li>
+          <img src={PelvicOrganprolapse11} alt="img" className='image' style={{width:'85%'}} />
           <li>
             <h3>Native Tissue POP Repairs</h3>
             <p>Native tissue repairs use the patients own tissue and are often recommended for women who wish to remain sexually active. Procedures like sacrospinous ligament suspension (SSLS) and uterosacral ligament plication (USLP) are common. </p>
@@ -120,6 +144,7 @@ const PelvicProlapseArticle = () => {
             <h3>Mesh-Based POP Repairs</h3>
             <p>Mesh-based repairs, particularly transvaginal mesh (TVM), have declined due to complications, with re-operation rates 2.4 times higher than native tissue repairs. SCP, performed abdominally, laparoscopically, or robotically, remains the gold standard for POP, offering a high success rate (78–100% at 3 years) but a 10.5% risk of mesh erosion by 7 years. Uterine-preserving mesh-based surgeries are gaining popularity due to reduced risks, but long-term data are limited. ACOG recommends these repairs only when other treatment options are not appropriate.</p>
           </li>
+          <img src={PelvicOrganprolapse12} alt="img" className='image' style={{width:'85%'}} />
           </ul>
         </div>
       </section>
@@ -130,7 +155,6 @@ const PelvicProlapseArticle = () => {
           <div className="service-card">
             <ul>
               <li>
-                <h3>High Income Country</h3>
                 <p><strong>Trends in pelvic organ prolapse management in Latin America</strong></p>
                 <p><strong>Study:</strong>The survey, which was assembled in Google Forms in both Spanish and Portuguese, was distributed via email to members of the CAU and gynecologic associations under the Federación Latinoamericana de Sociedades de Obstetricia y Ginecología (FLASOG). These associations comprise more than 30,000 members. Participants needed to have valid credentials and be active members of the associations in their respective countries to meet the inclusion criteria, while retired professionals were excluded. The survey was conducted between April and September 2016, consisting of 37 items aimed at characterizing the population, technical aspects of surgeries and procedures, theoretical knowledge, practice patterns, opinions, and perceptions.</p>
                 <p>A total of 673 responses were collected, with 529 (78.6%) participants meeting the inclusion criterion of performing at least one pelvic organ prolapse (POP) procedure per month. The majority of respondents were urologists (61%), followed by gynecologists (29.5%) and urogynecologists (9.5%).</p>
@@ -144,7 +168,6 @@ const PelvicProlapseArticle = () => {
                 <p><strong>Discussion:</strong>The study indicates that UP predominantly affects older women, particularly those of lower socio-economic status and engaged in manual labor, aligning with findings from similar studies. The observed age at presentation and the association with obstetric factors such as untrained delivery personnel and lack of episiotomy reflect established risk factors for UP. The high incidence of third-degree prolapse and common co-morbidities like hypertension and diabetes further illustrate the complex interplay of socio-economic and health factors in UP(uterine prolapse) cases. While surgical management, primarily vaginal hysterectomy, is prevalent, conservative methods such as ring pessaries and Kegel exercises are underutilized despite their potential benefits. This highlights the need for improved education on conservative management options and emphasizes the importance of addressing socio-economic and health disparities in preventive measures and treatment strategies for UP.</p>
             </li>
             <li>
-                <h3>Low-Income Country</h3>
                 <p><strong>Study:</strong>The intervention in this study involved the provision of free surgical treatment for severe stages of pelvic organ prolapse to 24 women, facilitated through a newly initiated campaign at the University of Gondar Hospital. The intervention included a comprehensive approach involving pre- and post-operative care, as well as follow-up assessments to evaluate the outcomes of the surgical treatment. Additionally, the study explored alternative healing practices, such as the use of tsebel (holy water) and local healers, by incorporating visits to holy water sites and interactions with traditional practitioners. This multi-faceted approach aimed to capture a holistic view of health care seeking behaviors among women with pelvic organ prolapse in Ethiopia.</p>
                 <p><strong>Outcomes:</strong>The study focused on 24 Ethiopian women with pelvic organ prolapse (POP) revealed that the average age was 46 years, with most being married and having experienced early marriages and deliveries. The majority had stage III prolapse, with many suffering for over a decade. Most women initially sought help from local health centers but faced barriers like financial constraints and negative perceptions of surgery. Many turned to local healers and holy water before considering hospital treatment.
                 A new community mobilization program significantly increased awareness of surgical options, leading to a shift in perceptions and greater willingness to seek hospital care. Structural barriers such as poverty, long distances to health facilities, and gender norms were substantial obstacles. </p>
@@ -157,7 +180,7 @@ const PelvicProlapseArticle = () => {
       </section>
       <section>
       <div className="service-card" id='specialists'>
-            <h3>SPECIALISTS</h3>
+            <h2>SPECIALISTS</h2>
             <p>Urogynecologists, Obsteticians and Gynecologists, Colorectal Surgeons, Physical Therapists(specialized in pelvic floor therapy),Urologists.</p>
           </div>
           </section>

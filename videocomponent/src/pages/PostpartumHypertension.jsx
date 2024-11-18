@@ -2,6 +2,7 @@ import './PostpartumHypertension.css';
 import Hypertension from './assets/Hypertension.png';
 import Hypertension1 from './assets/Hypertension(1).png';
 import SubtopicSidebar from './SubtopicSidebar';
+import Timeline from './assets/pics/Postpartum hypertension.png';
 
 
 const PostpartumHypertension = () => {
@@ -68,6 +69,9 @@ const PostpartumHypertension = () => {
         It is noted that 77% of the excess long-term cardiovascular risk associated with HDP is attributed to modifiable risk factors. So postpartum visits can help to prevent future complications.
       </p>
       </section>
+      <section>
+        <img src={Timeline} alt="Timeline" className='image' style={{width:'85%'}} />
+      </section>
       <section id='risk-factors'>
       <h2>RISK FACTORS</h2>
       <img src={Hypertension1} alt='hypertension risk factors' className='image' />
@@ -102,7 +106,6 @@ const PostpartumHypertension = () => {
       <p>
         The following are various case studies conducted across countries with different economic backgrounds, focusing on the control, prevention, and treatment of postpartum hypertension.
       </p>
-      <h3 >STUDY IN HIGH-INCOME COUNTRIES</h3>
       <h4>Telehealth with remote blood pressure monitoring for postpartum hypertension: A prospective single-cohort feasibility study</h4>
       <p >
         <strong>Study:</strong> The American College of Obstetricians and Gynecologists (ACOG) developed a postpartum evaluation algorithm to enhance postpartum care, with specific guidelines for BP checks and follow-up visits. 
@@ -126,7 +129,6 @@ const PostpartumHypertension = () => {
       <p >
        <strong>Discussion:</strong> The study demonstrates the effectiveness of telemonitoring and algorithm-driven care in managing postpartum hypertension, particularly in reducing the burden on patients during a busy postpartum period.
       </p>
-      <h3 >STUDY IN MID-INCOME COUNTRIES</h3>
       <h4 >The incidence of pregnancy hypertension in India, Pakistan, Mozambique, and Nigeria: A prospective population-level analysis</h4>
       <p >
         Study: In India, Pakistan, Mozambique, and Zimbabwe, a POM-guided approach using the Minipiers prediction model was employed to identify the risk of adverse maternal outcomes among women with pregnancy hypertension.
@@ -137,7 +139,6 @@ const PostpartumHypertension = () => {
       <p >
         <strong>Discussion:</strong> This study highlights the challenges of postpartum hypertension management in middle-income countries, where antenatal care quality varies. The POM-guided approach proved useful in identifying postpartum hypertension, but there remains a need for improved antenatal screening and follow-up care.
       </p>
-      <h3 >STUDY IN LOW-INCOME COUNTRY</h3>
       <h4 >Persistent Hypertension Up to One Year Postpartum among Women with Hypertensive Disorders in Pregnancy in a Low-Resource Setting: A Prospective Cohort Study</h4>
       <p >
         <strong>Study:</strong> The study was conducted across seven sites in Nigeria with diverse socio-economic backgrounds, focusing on antepartum and postpartum hypertension management.
@@ -161,7 +162,9 @@ const PostpartumHypertension = () => {
       <p >An OB/GYN should be consulted for up to a year postpartum. If the condition continues, a cardiologist should be consulted.</p>
       </section>
       </section>
-      <SubtopicSidebar />
+      <SubtopicSidebar images={{
+        hypertension: Hypertension 
+      }}/>
       </article>
     </div>
   );

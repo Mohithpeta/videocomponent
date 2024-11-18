@@ -2,6 +2,7 @@
 import './Obesity.css';
 import Obesity1 from './assets/Obesity.png';
 import SubtopicSidebar from './SubtopicSidebar';
+import Obesity2 from './assets/pics/OBESITY.png';
 
 const Obesity = () => {
   return (
@@ -35,6 +36,7 @@ const Obesity = () => {
         <p><strong>Obese pregnant women are also at an elevated rist of experiencing both antenatal and postnatal depression and anxiety symptoms compared to those with a normal weight.</strong></p>
       </section>
       <section id='risk-factors'>
+        <h2>RISK FACTORS</h2>
         <img src={Obesity1} alt="Obesity risk factors" style={{width:'85%'}} />
       </section>
 
@@ -56,6 +58,7 @@ const Obesity = () => {
         <h2>DIAGNOSIS</h2>
       <p>Women with a waist size greater than 35 inches (89 centimeters) have an increased risk for heart disease and type 2 diabetes. People with apple-shaped bodies (waist is bigger than the hips) also have an increased risk for these conditions.
       </p>
+      <img src={Obesity2} alt="img" className='image' style={{width:'85%'}} />
       </section>
 
       <section className="management">
@@ -94,7 +97,6 @@ const Obesity = () => {
         <h2>CASE STUDIES</h2>
         <p><strong>Randomized controlled trail of Home-Based lifestyle therapy on postpartum weight in undeserved women with overweight or obesity</strong></p>
         <div className="study">
-          <h3>High-Income Countries</h3>
           <p>
             <strong>Study:</strong> This study was conducted at Barnes-Jewish Hospital and Washington University School of Medicine in St. Louis, Missouri, between October 2012 and March 2016. The research involved 267 African American women aged 18 to 45 with a BMI between 25.0 and 45.0 kg/m², recruited from obstetrics clinics. The participants were randomly assigned to either standard Parents as Teachers (PAT) or PAT+Lifestyle intervention, with assessments taken at 15 weeks of gestation and 12 months postpartum. The standard PAT system focuses on parenting knowledge and child development, without addressing maternal weight or lifestyle changes. In contrast, PAT+Lifestyle includes tailored interventions for postpartum weight management, integrating healthy eating and physical activity guidance into the regular curriculum. The study primarily measured changes in body weight postpartum, with secondary outcomes focusing on weight gain during pregnancy according to Institute of Medicine (IOM) guidelines.
           </p>
@@ -104,7 +106,6 @@ const Obesity = () => {
         </div>
 
         <div className="study">
-          <h3>Mid-Income Countries</h3>
           <p>
            <strong>study:</strong>This narrative review aims to provide a weight management module for Indian postpartum women, based on both evidence and expert opinion, for use by clinicians.
           </p>
@@ -113,7 +114,6 @@ const Obesity = () => {
         </div>
 
         <div className="study">
-          <h3>Low-Income Countries</h3>
           <p><strong>Midwives’ and obstetricians’ perspectives about pregnancy related weight management in Ethiopia: A qualitative study</strong></p>
           <p>
             <strong>Study:</strong>The study was conducted in Addis Ababa, Ethiopia, involving midwives and obstetricians from seven health centers and four tertiary public hospitals in the city. Midwives were purposively recruited from the health centers and one of the hospitals, while obstetricians were recruited from the hospitals. Only those who provided antenatal care services at the time of data collection were included in the study, excluding midwives involved only in labor, birth, or postpartum care and obstetricians focused on teaching or surgery. The primary author invited eligible participants, explaining the studys objectives and data collection procedures. A total of 11 midwives and 10 obstetricians agreed to participate.

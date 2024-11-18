@@ -2,6 +2,10 @@ import UrinaryIncontinenc from './assets/Urinary Incontinence(1).png';
 import UrinaryIncontinence1 from './assets/Urinary Incontinence.png';
 import SubtopicSidebar from './SubtopicSidebar';
 import './UrinaryIncontinence.css';
+import UrinaryIncontinence2 from './assets/pics/URINARY INCONTINENCE(1).png';
+import UrinaryIncontinence3 from './assets/pics/URINARY INCONTINENCE(2).png';
+import UrinaryIncontinence4 from './assets/pics/URINARY INCONTINENCE(3).png';
+import UrinaryIncontinence5 from './assets/pics/URINARY INCONTINENCE(4).png';
 
 const UrinaryIncontinence = () => {
   return (
@@ -66,12 +70,17 @@ const UrinaryIncontinence = () => {
         <li><strong>Bladder Volume:</strong> Conducted with 200-400 mL volume.</li>
         <li><strong>Positive Test Criteria:</strong> Visual urine leakage with cough.</li>
       </ul>
+      <section>
+        <img src={UrinaryIncontinence2} alt="cough stess test" className='image' style={{width:'85%'}} />
+      </section>
 
       <h3>2. Pad Test</h3>
       <p>
         This test measures urine leakage by weighing an absorbent pad before and after leakage. The difference in weight indicates the amount of urine leaked.
       </p>
-
+       <section>
+        <img src={UrinaryIncontinence3} alt="Pad test" className='image' style={{width:'85%'}} />
+       </section>
       <h3>3. Urodynamic Testing</h3>
       <h4>Uroflowmetry</h4>
       <p>
@@ -87,6 +96,9 @@ const UrinaryIncontinence = () => {
       <p>
         The cystometric test measures bladder pressure and capacity, with the bladder gradually filled and sensations reported.
       </p>
+      <section>
+        <img src={UrinaryIncontinence4} alt="Cystometric test" className='image' style={{width:'85%'}} />
+      </section>
 
       <h4>Leak Point Pressure Measurement</h4>
       <p>
@@ -102,6 +114,9 @@ const UrinaryIncontinence = () => {
       <p>
         EMG is used if nerve or muscle damage is suspected. Sensors record the electrical activity of bladder muscles and nerves.
       </p>
+      <section>
+        <img src={UrinaryIncontinence5} alt="image" className='image' style={{width:'85%'}} />
+      </section>
 
       <h4>Video Urodynamic Tests</h4>
       <p>
@@ -182,7 +197,7 @@ const UrinaryIncontinence = () => {
   <section id='case-studies'>
       <h2>Case Studies</h2>
 
-      <h3>Study in High-Income Countries</h3>
+
       <h4>Preventing Urinary Incontinence During Pregnancy and Postpartum</h4>
       <p>
         <strong>Study:</strong> This study provides a review of modifiable risk factors and preventive measures for urinary incontinence during pregnancy and postpartum, with a strong emphasis on PFMT as the most effective preventive strategy.
@@ -205,7 +220,7 @@ const UrinaryIncontinence = () => {
         <strong>Discussion:</strong> Supports group-based antenatal PFMT as an effective and cost-efficient method to reduce UI during pregnancy.
       </p>
 
-      <h3>Study in Mid-Income Countries</h3>
+
       <h4>Supervised Pelvic Floor Muscle Exercise Program</h4>
       <p>
         <strong>Study:</strong> This randomized controlled trial included 63 pregnant women, where the intervention group participated in a 6-week supervised pelvic floor muscle exercise program.
@@ -213,7 +228,7 @@ const UrinaryIncontinence = () => {
       <p>
         <strong>Outcome:</strong> At 38 weeks gestation, SUI incidence was lower in the intervention group (27.3%) compared to the control group (53.3%).
       </p>
-      <h3>Study in Low-Income Country</h3>
+
       <p><strong>Pelvic floor muscle training programme in pregnant Nepalese women-a feasibility study</strong></p>
       <p><strong>Study:</strong>This study in Nepal explored the feasibility and acceptability of pelvic floor muscle training (PFMT) among pregnant women in their first trimester attending antenatal check-ups. Exclusion criteria included complications like pre-eclampsia and vaginal bleeding. Supervised PFMT sessions, adapted to Nepalese lifestyles, were provided, encouraging daily home practice. The study assessed PFMT effectiveness, adherence, and motivation using exercise diaries and questionnaires, with educational support through videos, leaflets, and biofeedback. Attendance was affected by logistical challenges, but many women showed high motivation, especially for preventing pelvic organ prolapse (POP).</p>
       <p><strong>Outcome:</strong>The study found that tailored, supervised PFMT could be a feasible intervention in antenatal care for Nepalese women. However, adherence was influenced by factors such as time constraints and cultural considerations. Despite these challenges, the high level of motivation reported by the participants suggests that PFMT holds promise as a preventive measure for POP and other pelvic floor issues.</p>
