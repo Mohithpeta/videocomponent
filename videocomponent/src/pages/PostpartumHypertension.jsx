@@ -3,6 +3,7 @@ import Hypertension from './assets/Hypertension.png';
 import Hypertension1 from './assets/Hypertension(1).png';
 import SubtopicSidebar from './SubtopicSidebar';
 import Timeline from './assets/pics/Postpartum hypertension.png';
+import Hypertension3 from './assets/pics/Hypertension(1).png';
 
 
 const PostpartumHypertension = () => {
@@ -97,6 +98,7 @@ const PostpartumHypertension = () => {
       <p >
         Some of the commonly used hypertensives for breastfeeding mothers and their side effects with contraindications are given below:
       </p>
+      <img src={Hypertension3} alt="img" className='image' style={{width:'85%'}} />
       <p>
         <strong>Note:</strong> A contraindication is a condition that warrants the avoidance of a drug due to potential harm.
       </p>

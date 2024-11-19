@@ -95,13 +95,10 @@ const Anxiety = () => {
                 <li>The Postpartum Specific Anxiety Scale (PSAS) consists of 10 questions that focus on anxiety symptoms specifically related to the postpartum experience, allowing for a targeted assessment of new mothers mental health.</li>
             </ul>
         </ol>
-      </section>
-      <section id='diagnosis'>
         <h2>DIAGNOSIS</h2>
       <p>Diagnosing perinatal anxiety is challenging due to the overlap between typical postpartum symptoms and those of anxiety disorders. Despite evidence showing that anxiety disorders are common during the postpartum period, universal assessment for anxiety has not been routinely implemented in postpartum care.</p>
       <p><strong>The American congress of obstetricians and Gynecologists</strong>recommends screening for both anxiety and depression at least once during the perinatal period, using a standardized and validated instrument. If anxiety is detected during pregnancy, follow-up assessments should be conducted postpartum.</p>
       </section>
-
       <section className="space-y-4" id='treatment'>
         <h2 className="heading2">TREATMENT</h2>
         <div className="div">

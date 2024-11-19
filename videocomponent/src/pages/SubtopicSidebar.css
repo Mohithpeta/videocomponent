@@ -15,7 +15,8 @@
     overflow-y: auto;
     z-index: 1000;
     transition: width 0.3s ease;
-    max-width: 275px;
+    min-width: 275px;
+    max-width: 14vw;
     margin-top: 3.6rem;
 }
 

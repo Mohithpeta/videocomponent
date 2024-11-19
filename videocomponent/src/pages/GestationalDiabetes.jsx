@@ -12,27 +12,14 @@ const GestationalDiabetes = () => {
       <h1>Gestational Diabetes</h1>
       
       <section>
-        <h2>Introduction</h2>
         <p>
-          Gestational diabetes refers to any level of glucose intolerance that begins or is first identified during pregnancy.
-          Pregnancy is often accompanied by insulin resistance (IR) and hyperinsulinemia, increasing diabetes risk in some women.
-          However, this definition does not exclude pre-existing but undiagnosed glucose intolerance, which has led to suggestions 
-          like `&quot;`hyperglycemia in pregnancy`&quot` by the Endocrine Society.
+        Gestational diabetes refers to any level of glucose intolerance that begins or is first identified during pregnancy. Pregnancy is often accompanied by insulin resistance (IR) and hyperinsulinemia, which can increase the risk of diabetes in some women. However, this definition does not rule out the possibility of pre-existing but undiagnosed glucose intolerance, which has led to the suggestion by the Endocrine Society that the term hyperglycemia in pregnancy might be more accurate. The International Association of Diabetes and Pregnancy Study Groups (IADPSG) categorizes hyperglycemia detected during pregnancy as either overt diabetes or gestational diabetes mellitus (GDM). In 2013, the World Health Organization (WHO) recommended that hyperglycemia identified during pregnancy be classified as either diabetes mellitus (DM) in pregnancy or GDM.
         </p>
-        <p>
-          The International Association of Diabetes and Pregnancy Study Groups (IADPSG) categorizes hyperglycemia detected during pregnancy
-          as either overt diabetes or gestational diabetes mellitus (GDM). In 2013, the World Health Organization (WHO) recommended
-          hyperglycemia in pregnancy be classified as diabetes mellitus (DM) in pregnancy or GDM.
-        </p>
-      </section>
-      
-      <section>
-        <h2>Prevalence and Risk Factors</h2>
-        <p>
-          The prevalence of gestational diabetes mellitus (GDM) ranges from 1% to 20% and is increasing globally, alongside rising obesity
-          and type 2 diabetes mellitus (T2DM) rates. Higher GDM prevalence is noted in African, Hispanic, Indian, and Asian women compared
-          to Caucasian women.
-        </p>
+        <ul>
+          <li>The prevalence of gestational diabetes mellitus (GDM) ranges from 1% to 20% and is increasing globally, alongside the rising prevalence of obesity and type 2 diabetes mellitus (T2DM).</li>
+          <li>The prevalence of GDM is directly proportional to the prevalence of T2DM within a population or ethnic group.</li>
+          <li>African, Hispanic, Indian, and Asian women have higher prevalence rates of GDM compared to Caucasian women.</li>
+        </ul>
       </section>
       
       <section>
@@ -44,33 +31,20 @@ const GestationalDiabetes = () => {
       </section>
       
       <section>
-        <h2>Why Diabetes During Pregnancy?</h2>
+        <h3>Why Diabetes During Pregnancy?</h3>
         <p>
           During a normal pregnancy, insulin resistance (IR) starts mid-pregnancy and increases in the third trimester due to placental 
           hormones like TNF-α, human placental lactogen, estrogen, progesterone, and cortisol. The pancreas compensates with increased 
           insulin production, but GDM occurs when it can’t keep up.
         </p>
       </section>
-
-      
-
       <section id='symptoms'>
         <h2>Symptoms</h2>
-        <p>
-          Gestational diabetes often has no noticeable signs or symptoms. Possible symptoms include increased thirst and frequent urination.
-        </p>
         <img src={Gestational} alt="gestational diabetes" style={{width:'85%'}} className='image'/>
       </section>
 
       <section id='risk-factors'>
         <h2>Risk Factors due to GDM</h2>
-        <ul>
-          <li>Increased incidence of hypertensive disorders, such as gestational hypertension, preeclampsia, and eclampsia.</li>
-          <li>Higher risk of polyhydramnios, potentially leading to preterm labor.</li>
-          <li>Increased likelihood of cesarean deliveries due to excessive fetal growth.</li>
-          <li>Long-term risks of developing type 2 diabetes and cardiovascular disease.</li>
-          <li>50% of women with GDM develop type 2 diabetes postpartum or later in life.</li>
-        </ul>
         <img src={Gestational1} alt="Gestational risk factors" style={{width:'85%'}} className='image'/>
       </section>
       <section id='screening'>
@@ -85,16 +59,14 @@ const GestationalDiabetes = () => {
           <li>Maternal obesity.</li>
           <li>Belonging to an ethnic group at higher risk for GDM.</li>
         </ul>
-      </section>
-
-      <section>
-        <h2>Process Flow</h2>
+        <h4>Process flow:</h4>
         <ol>
-          <li>First Antenatal Visit: Blood test measures fasting plasma glucose. A level of ≥92 mg/dl diagnoses GDM.</li>
-          <li>If fasting glucose is below 92 mg/dl, a 2-hour 75-g OGTT is performed at 24-28 weeks to check for GDM development.</li>
+          <li><strong>First Antenatal Visit:</strong>During the first prenatal check-up, a blood test is done to measure the fasting plasma glucose (the amount of sugar in your blood after not eating for at least 8 hours). If this level is equal to or greater than 92 mg/dl, the healthcare provider diagnoses the patient with gestational diabetes.</li>
+          <li><strong>If Blood Sugar is Lower than 92 mg/dl:</strong>If the fasting glucose level is less than 92 mg/dl at this first check-up the patient is not diagnosed with gestational diabetes. However, another test is taken, called a 2-hour 75-g oral glucose tolerance test (OGTT), between the 24th and 28th weeks of pregnancy. This is to ensure that gestational diabetes doesn’t develop later during pregnancy.</li>
         </ol>
+        <p>In short, the first test checks for early signs of GDM, and if those signs aren’t present, another test is taken later in the pregnancy to ensure that GDM has not developed by that stage.</p>
+        <p>Routine screening for low-risk pregnancies will not be conducted unless pregnancy-related clinical signs and symptoms of hyperglycemia were present. These signs included accelerated fetal growth, macrosomia, polyhydramnios, or symptoms like polyuria and polydipsia. In such cases, diagnostic testing was initiated.</p>
       </section>
-
       <section id='diagnosis'>
         <h2>Diagnosis</h2>
         <p>
@@ -127,12 +99,12 @@ const GestationalDiabetes = () => {
   <p>It uses the term decreased gestational glucose tolerance (DGGT) for a 2-hour plasma glucose of ≥120 mg/dL but &lt;140 mg/dL. Women with DGGT have worse postpartum outcomes compared to those with normal glucose tolerance.</p>
 
   <p>In a study conducted across India, data was collected from 1,634 OB/GYNs regarding the diagnostic methods they use for gestational diabetes mellitus (GDM). The results are as follows:</p>
-  <ul>
+  <ol>
     <li>Diabetes in Pregnancy Study Group India (DIPSI) criteria: 600 OB/GYNs (36.7%)</li>
     <li>World Health Organization (WHO) 1999 criteria: 403 OB/GYNs (24.7%)</li>
     <li>International Association for Diabetes and Pregnancy Study Groups (IADPSG) criteria: 389 OB/GYNs (23.8%)</li>
     <li>American Diabetes Association (ADA) 2-step method: 242 OB/GYNs (14.8%)</li>
-  </ul>
+  </ol>
   </section>
   <section id='treatment'>
   <h2>TREATMENT</h2>
@@ -146,18 +118,6 @@ const GestationalDiabetes = () => {
 
   <p>Insulin Administration Devices include insulin pens and continuous subcutaneous insulin infusion (CSII) systems. Insulin pens are recommended for their ease of use and precision, offering a discreet and user-friendly method for insulin delivery. CSII can be beneficial for patients requiring more intensive glucose control, providing continuous insulin infusion that mimics physiological insulin secretion. However, CSII requires careful training and monitoring due to its complexity and potential for user error or infusion site issues.</p>
   </section>
-   <section>
-  <h2>POSTPARTUM SCREENING</h2>
-  <p>To prevent diabetes after delivery, postpartum screening is essential. Below is data from physicians in India on their recommendations for follow-ups:</p>
-  <ul>
-    <li>56% of physicians, diabetologists, and endocrinologists, along with 71.6% of OB/GYNs, recommended that women with gestational diabetes mellitus (GDM) undergo an oral glucose tolerance test (OGTT) after delivery.</li>
-    <li>42.4% of diabetologists and endocrinologists, as well as 44.2% of OB/GYNs, advised OGTT within 6 weeks of delivery.</li>
-    <li>48% of diabetologists and endocrinologists, along with 49.4% of OB/GYNs, recommended OGTT between 6 weeks and 2 months after delivery.</li>
-  </ul>
-  </section>
-  <p>Post-pregnancy treatment involving diet, exercise, and/or metformin has shown to be effective in preventing the onset of type 2 diabetes. Randomized trials in non-pregnant individuals with impaired glucose tolerance have demonstrated the effectiveness of these interventions in lowering the risk of developing type 2 diabetes.</p>
-
- 
    <section id='case-studies'>
    <h2>CASE STUDIES</h2>
   <h4>Preventing Gestational Diabetes Mellitus with Lifestyle Intervention: The Finnish Gestational Diabetes Prevention Study (RADIEL)</h4>
@@ -182,80 +142,43 @@ const GestationalDiabetes = () => {
 
   <h3>OTHER CASE STUDIES</h3>
   <p>The study examined postpartum glucose tolerance in 203 women with gestational diabetes mellitus (GDM), with a focus on follow-up testing for dysglycemia. The findings underscore the importance of tailored postpartum programs for women with GDM, especially in regions where cultural factors may affect follow-up testing.</p>
-  </section>
-  <section>
-  <h2>Postpartum Care in Gestational Diabetes</h2>
-      <p>
-        Postpartum follow-up for women with GDM generally focuses on two main areas: postpartum screening for diabetes and the prevention of type 2 diabetes through the promotion of healthy lifestyles. The likelihood of postpartum testing is found to increase significantly with a postpartum visit to an obstetrician-gynecologist (OBGYN), and the likelihood increases further with multiple postpartum visits.
-      </p>
+ 
+  <h3>Postpartum Care in Gestational Diabetes</h3>
+     <h4>PostPartum screening</h4>
+     <p>To prevent diabetes after delivery, postpartum screening is essential. Below is data from physicians in India on their recommendations for follow-ups:</p>
+     <ul>
+       <li>56% of physicians, diabetologists, and endocrinologists, along with 71.6% of OB/GYNs, recommended that women with gestational diabetes mellitus (GDM) undergo an oral glucose tolerance test (OGTT) after delivery.</li>
+       <li>42.4% of diabetologists and endocrinologists, as well as 44.2% of OB/GYNs, advised OGTT within 6 weeks of delivery.</li>
+       <li>48% of diabetologists and endocrinologists, along with 49.4% of OB/GYNs, recommended OGTT between 6 weeks and 2 months after delivery.</li>
+     </ul>
+     <p>Post-pregnancy treatment involving diet, exercise, and/or metformin has shown to be effective in preventing the onset of type 2 diabetes. Randomized trials in non-pregnant individuals with impaired glucose tolerance have demonstrated the effectiveness of these interventions in lowering the risk of developing type 2 diabetes.</p>
+     <p>Postpartum follow-up for women with GDM generally focuses on two main areas: postpartum screening for diabetes and the prevention of type 2 diabetes through the promotion of healthy lifestyles. The likelihood of postpartum testing is found to increase significantly with a postpartum visit to an obstetrician-gynecologist (OBGYN), and the likelihood increases further with multiple postpartum visits.</p>
+     <h4>Barriers to Postpartum follow-up care</h4>
+     <p>Several barriers to postpartum follow-up care were identified, including:</p>
+     <ul>
+      <li>Emotional Stress and Adjustment: Women reported emotional stress, feeling overwhelmed, and the burden of childcare as key challenges in adjusting to life with a new baby. Concerns about postpartum and future health, such as feeling healthy and not needing care or fearing bad news, also hindered follow-up.</li>
+      <li>Experiences with Medical Care: Dissatisfaction with care and the logistics of accessing medical services were highlighted as additional barriers.</li>
+     </ul>
+     <h4>Common Barriers identified in studies</h4>
+     <ul>
+      <li>Lack of Time and Energy: This was a frequently mentioned barrier across multiple studies .</li>
+      <li>Lack of Childcare Support: A major issue in ensuring postpartum follow-up .</li>
+      <li>Other Barriers: Not feeling well or experiencing emotional distress, lack of motivation, financial constraints, domestic responsibilities, such as cooking, lack of knowledge and understanding about GDM, lack of social support, feeling isolated or dullness, poor body image, bad weather conditions, belief that being too young made it unnecessary to follow a restricted diet, obstacles related to work, unsuitable neighborhoods or lack of access to exercise equipment, cultural expectations, such as the belief that a womans needs come last in the family, lack of enjoyment in physical activity.</li>
+     </ul>
+     <h4>Specific Barrier to postpartum weight reduction</h4>
+     <p>In a study conducted among immigrant women in Australia, it was noted that breastfeeding posed a barrier to postpartum weight reduction as it led to an increase in food intake.</p>
+     <h4>Risk Perception</h4>
+     <p>Despite awareness, many women underestimate their risk of developing diabetes post-GDM:</p>
+     <ul>
+      <li>In a US study, although 90% of women acknowledged that GDM increases the risk of future diabetes, only 16% believed they were at high risk. This number increased to 39% when women considered their risk assuming they maintained their current lifestyle.</li>
+      <li>In Denmark, 40% of women with a history of GDM were very worried about developing diabetes in the future, 46% were a little worried, and 14% were not worried at all.</li>
+      <li>Among Aboriginal women in Canada, those with a history of GDM or currently experiencing a GDM-affected pregnancy reported attempts to continue eating healthily postpartum to protect their health. However, some women felt less concerned about their diet after delivery, assuming that their dietary intake would no longer impact their health.</li>
+     </ul>
       </section>
+      <p><strong>The lack of communication between the delivery unit and the primary care clinic where women attend postpartum check-ups has resulted in confusion and uncertainty among healthcare providers regarding postpartum diabetes screening.</strong></p>
+      <p>South Asian women diagnosed with GDM using the IADPSG criteria remain at a significantly high risk of dysglycemia during postpartum follow-up. Although there is ongoing debate about using these criteria for diagnosing milder glucose intolerance during pregnancy, they have been effective in predicting postpartum metabolic outcomes, at least in our context. By identifying women in the stage of intermediate hyperglycemia, these criteria may offer a valuable opportunity for early intervention and diabetes prevention. Further research focused on long-term metabolic outcomes across different regions and the cost-effectiveness of these criteria may ultimately determine their overall usefulness.</p>
       <section>
-      <h2>Barriers to Postpartum Follow-Up Care</h2>
-      <p>
-        Several barriers to postpartum follow-up care were identified, including:
-      </p>
-      <h3>Emotional Stress and Adjustment</h3>
-      <p>
-        Women reported emotional stress, feeling overwhelmed, and the burden of childcare as key challenges in adjusting to life with a new baby. Concerns about postpartum and future health, such as feeling healthy and not needing care or fearing bad news, also hindered follow-up.
-      </p>
-      <h3>Experiences with Medical Care</h3>
-      <p>
-        Dissatisfaction with care and the logistics of accessing medical services were highlighted as additional barriers.
-      </p>
-      </section>
-      <section>
-      <h2>Risk Perception</h2>
-      <p>
-        Despite awareness, many women underestimate their risk of developing diabetes post-GDM:
-      </p>
-      <ul>
-        <li>
-          In a US study, although 90% of women acknowledged that GDM increases the risk of future diabetes, only 16% believed they were at high risk. This number increased to 39% when women considered their risk assuming they maintained their current lifestyle.
-        </li>
-        <li>
-          In Denmark, 40% of women with a history of GDM were very worried about developing diabetes in the future, 46% were a little worried, and 14% were not worried at all.
-        </li>
-        <li>
-          Among Aboriginal women in Canada, those with a history of GDM or currently experiencing a GDM-affected pregnancy reported attempts to continue eating healthily postpartum to protect their health. However, some women felt less concerned about their diet after delivery, assuming that their dietary intake would no longer impact their health.
-        </li>
-      </ul>
-      </section>
-      <section>
-      <h2>Common Barriers Identified in Studies</h2>
-      <ul>
-        <li>Lack of Time and Energy</li>
-        <li>Lack of Childcare Support</li>
-        <li>Other Barriers:
-          <ul>
-            <li>Not feeling well or experiencing emotional distress</li>
-            <li>Lack of motivation</li>
-            <li>Financial constraints</li>
-            <li>Domestic responsibilities, such as cooking</li>
-            <li>Lack of knowledge and understanding about GDM</li>
-            <li>Lack of social support</li>
-            <li>Feeling isolated or dullness</li>
-            <li>Poor body image</li>
-            <li>Bad weather conditions</li>
-            <li>Belief that being too young made it unnecessary to follow a restricted diet</li>
-            <li>Obstacles related to work</li>
-            <li>Unsuitable neighborhoods or lack of access to exercise equipment</li>
-            <li>Cultural expectations, such as the belief that a womans needs come last in the family</li>
-            <li>Lack of enjoyment in physical activity</li>
-          </ul>
-        </li>
-      </ul>
-      </section>
-      <section>
-      <h2>Specific Barrier to Postpartum Weight Reduction</h2>
-      <p>
-        In a study conducted among immigrant women in Australia, it was noted that breastfeeding posed a barrier to postpartum weight reduction as it led to an increase in food intake.
-      </p>
-      <p>
-        The lack of communication between the delivery unit and the primary care clinic where women attend postpartum check-ups has resulted in confusion and uncertainty among healthcare providers regarding postpartum diabetes screening.
-      </p>
-      <p>
-        South Asian women diagnosed with GDM using the IADPSG criteria remain at a significantly high risk of dysglycemia during postpartum follow-up. Although there is ongoing debate about using these criteria for diagnosing milder glucose intolerance during pregnancy, they have been effective in predicting postpartum metabolic outcomes, at least in our context. By identifying women in the stage of intermediate hyperglycemia, these criteria may offer a valuable opportunity for early intervention and diabetes prevention. Further research focused on long-term metabolic outcomes across different regions and the cost-effectiveness of these criteria may ultimately determine their overall usefulness.
-      </p>
+
       </section>
       <section id='specialists'>
       <h2>Specialists</h2>
